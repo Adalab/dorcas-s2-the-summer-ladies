@@ -1,3 +1,45 @@
+<<<<<<< HEAD
+=======
+header {
+  width: auto;
+  height: 111px;
+  padding: 30px 79px 30px 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header__logo {
+  max-width: 201px;
+  max-height: 51px;
+}
+
+footer {
+  width: auto;
+  height: 111px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #6b6b6b;
+}
+
+.footer__logo {
+  max-width: 103px;
+  max-height: 40px;
+}
+
+>>>>>>> 395d6c29a509dbcb3dcce6b5ef5fe12bad84990a
 * {
   margin: 0px;
   padding: 0px;
