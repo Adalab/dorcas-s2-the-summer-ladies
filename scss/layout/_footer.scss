@@ -1,0 +1,15 @@
+footer {
+  width: auto;
+  height: 111px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $credits-text;
+}
+
+.footer__logo {
+  max-width: 103px;
+  max-height: 40px;
+}
