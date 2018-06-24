@@ -41,3 +41,21 @@
   font-size: 14px;
   color: white;
 }
+
+// ----AYLEN ----//
+
+.button {
+  width: 75px;
+  height: 30px;
+  border-radius: 15px;
+  border: solid 1px $color-line-bottom;
+}
+
+.button-reset {
+  width: 34px;
+  height: 20px;
+  font-family: $font-family;
+  font-size: 12px;
+  line-height: 1.67px;
+  text-transform: uppercase;
+}

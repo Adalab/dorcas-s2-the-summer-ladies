@@ -292,5 +292,84 @@ body {
   color: white;
 >>>>>>> 39bfd7ffbdcc95763e187733aa0f7778231a28ad
 }
+/* PARTE DE AYLEN */
+.visor {
+  display: flex;
+  background-color: $color-card-background;
+  width: 320px;
+  height: 428px;
+}
+
+.visor__view {
+  display: flex;
+  width: 240px;
+  height: 367px;
+  padding: 60px 35px 30px 45px;
+}
+
+.visor__view-name {
+  width: 206px;
+  height: 20px;
+  font-family: $title-font;
+  font: $indexfont-color;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.11px;
+}
+
+.visor__view-profession {
+  width: 153px;
+  height: 20px;
+  font-family: $title-font;
+  font: $color-titles;
+  font-size: 16px;
+  line-height: 1.25px;
+}
+
+.visor__view-a-list {
+  display:flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: solid 2px $colorline;
+  padding: 15px 0 45px;
+}
+
+.fab,
+.fa {
+  color: $indexfont-color;
+}
+
+.border-top {
+  width: 240px;
+  height: 2px;
+  opacity: 0.2;
+  border-top: 1px solid $color-general-buttons;
+}
+
+
+.visor__view-list-txt {
+  width: 46px;
+  height: 18px;
+  border-radius: 4px;
+}
+
+
+.visor__list-text {
+  width: 36px;
+  height: 18px;
+  font-family: $font-family;
+  font-size: 13px;
+  background-color: $color-general-buttons;
+  color: $credits-text;
+}
+
+
+
+
+
 
 /*# sourceMappingURL=main.css.map */
