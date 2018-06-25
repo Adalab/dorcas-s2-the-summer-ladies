@@ -9,3 +9,8 @@
   color: $color-background;
   padding: 10px 20px;
 }
+@media all and (min-width:768px) {
+  .home__button {
+    margin-top: 185px;
+  }
+}
