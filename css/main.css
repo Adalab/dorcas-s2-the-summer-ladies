@@ -170,6 +170,15 @@ body {
   color: #54585a;
 }
 
+<<<<<<< HEAD
+=======
+.section__4--comparte-link {
+  font-style: "Open Sans", sans-serif;
+  font-size: 12;
+  color: #e17334;
+}
+
+>>>>>>> 7bbe801105c704528387b80700d067580d2f657e
 .home__button {
   margin-top: 37px;
   border-radius: 21px;
@@ -297,4 +306,37 @@ body {
   width: 85%;
 }
 
+<<<<<<< HEAD
+=======
+@media all and (min-width: 768px) {
+  .home {
+    max-width: 420px;
+    margin: 348px auto 60px;
+  }
+
+  .home__logo {
+    height: 107px;
+  }
+
+  .home__title {
+    font-size: 24px;
+    padding: 31px 0 5px;
+  }
+
+  .home__subtitle {
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+
+  .home__links {
+    border-radius: 5px;
+    border: 2px;
+  }
+
+  .home__button {
+    margin-top: 185px;
+  }
+}
+
+>>>>>>> 7bbe801105c704528387b80700d067580d2f657e
 /*# sourceMappingURL=main.css.map */
