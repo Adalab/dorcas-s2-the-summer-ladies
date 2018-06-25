@@ -50,17 +50,13 @@
 
 // ----AYLEN ----//
 
-.button {
-  width: 75px;
-  height: 30px;
+.visor__button-reset {
+  padding: 10px 5px;
   border-radius: 15px;
-  border: solid 1px $color-line-bottom;
-}
-
-.button-reset {
-  width: 34px;
-  height: 20px;
+  border: solid 1px $color-background;
+  color: $color-titles;
   font-size: 12px;
   line-height: 1.67px;
   text-transform: uppercase;
+  background-color: $color-card-background;
 }

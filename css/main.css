@@ -183,6 +183,8 @@ body {
   padding: 10px 20px;
 }
 
+<<<<<<< HEAD
+=======
 .section4__comparte--containerbutton {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,6 +197,7 @@ body {
   align-items: center;
 }
 
+>>>>>>> 342dc84ef369d4df83ef25b158f60f11959a1ec3
 .section4__comparte--buttonstyle {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -202,12 +205,47 @@ body {
   height: 50px;
   border-radius: 12px;
   background-color: #e17334;
+<<<<<<< HEAD
+  font-family: "Open Sans", sans-serif;
+=======
+>>>>>>> 342dc84ef369d4df83ef25b158f60f11959a1ec3
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   color: white;
   -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+<<<<<<< HEAD
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 24px;
+  margin-top: 13px 18px 13px 18px;
+}
+
+.section4__comparte--button-twitter {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 181px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #00a0f5;
+  font-family: "Open Sans", sans-serif;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  font-size: 14px;
+  color: white;
+}
+
+.visor__button-reset {
+  padding: 10px 5px;
+  border-radius: 15px;
+  border: solid 1px #f5f5f5;
+  color: #54585a;
+  font-size: 12px;
+  line-height: 1.67px;
+  text-transform: uppercase;
+  background-color: linear-gradient(#bfcdd0, #dde9ed);
+=======
   margin-top: 13px 18px 13px 18px;
 }
 
@@ -237,6 +275,7 @@ body {
   font-size: 12px;
   line-height: 1.67px;
   text-transform: uppercase;
+>>>>>>> 342dc84ef369d4df83ef25b158f60f11959a1ec3
 }
 
 .form {
@@ -302,6 +341,20 @@ body {
 .form__rellena--file input {
   border: 0px;
   width: 85%;
+<<<<<<< HEAD
+}
+
+.visor {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bfcdd0), to(#dde9ed));
+  background-image: linear-gradient(#bfcdd0, #dde9ed);
+  width: 100%;
+}
+
+.visor__view {
+  width: 240px;
+  text-align: center;
+=======
+>>>>>>> 342dc84ef369d4df83ef25b158f60f11959a1ec3
 }
 
 @media all and (min-width: 768px) {
