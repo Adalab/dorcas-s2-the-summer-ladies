@@ -4,6 +4,11 @@
 }
 
 .visor__view{
-  width: 240px;
   text-align: center;
+}
+
+.visor__view-name {
+  font-size: 18px;
+  line-height: 1;
+  color: $indexfont-color;
 }
