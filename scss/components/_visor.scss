@@ -3,12 +3,35 @@
   width: 100%;
 }
 
-.visor__view{
-  text-align: center;
+.visor__view {
+  margin: 0;
+  width: 240px;
+}
+
+.visor__rectangle {
+  display: block;
+  align-items: center;
+padding: 60px 35px 30px 45px;
+
 }
 
 .visor__view-name {
   font-size: 18px;
-  line-height: 1;
+  line-height: 20px;
+
   color: $indexfont-color;
+  text-transform: capitalize;
+  font-family: $font-primary;
+}
+
+
+.visor__view-profession {
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-titles;
+  font-family: $font-primary;
+}
+
+.visor__image {
+
 }
