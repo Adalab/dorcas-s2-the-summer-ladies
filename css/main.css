@@ -238,18 +238,21 @@ body {
   background-color: linear-gradient(#bfcdd0, #dde9ed);
 }
 
-.form {
-  display: grid;
-  grid-column: "1fr";
-  grid-row: "2fr";
-  background-color: white;
-  margin-left: 20px;
-  margin-right: 20px;
+.form__rellena--button {
+  width: 140px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #e17334;
+  color: white;
 }
 
-.card__preview {
-  background-color: linear-gradient(#bfcdd0, #dde9ed);
-  height: 457px;
+body {
+  background-color: white;
+}
+
+.form {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .form__rellena fieldset {
