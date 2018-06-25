@@ -1,0 +1,72 @@
+
+.form {
+  display: grid;
+  grid-column: "1fr";
+  grid-row: "2fr";
+  background-color: white;
+  margin-left:20px;
+  margin-right: 20px;
+}
+
+.card__preview{
+  background-color: $color-card-background;
+  height: 457px;
+}
+
+
+.form__rellena {
+
+  fieldset {
+  border: 0px;
+  }
+  label {
+    color: $indexfont-color; /* esta variable no deberia llamarse asi porque no es solo para el index*/
+    font-size: 14px;
+  }
+  input {
+  width: 100%;
+  margin: 0px auto;
+  border: solid 1px $colorline;
+  height: 30px;
+  }
+}
+
+.titulo__rellena {
+  * {
+    display: inline;
+    padding: 10px;
+  }
+}
+
+.form__rellena--plus {
+    margin-top: 60px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 12px;
+    border: solid 2px;
+    display: inline;
+    padding: 6px 9px;
+
+}
+
+.form__rellena--reload {
+  width: 30px;
+  height: 30px;
+  border: solid 1px $colorline;
+  display: inline-block;
+}
+
+.form__rellena--step {
+  height: 55px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+
+.form__rellena--file {
+  input {
+  border: 0px;
+  width: 85%;
+  }
+}

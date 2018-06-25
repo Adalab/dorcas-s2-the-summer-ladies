@@ -9,8 +9,58 @@
   color: $color-background;
   padding: 10px 20px;
 }
+
 @media all and (min-width:768px) {
   .home__button {
     margin-top: 185px;
   }
+
+// ----VERO ----//
+
+.section4__comparte--buttonstyle {
+    box-sizing: border-box;
+    width: 199px;
+    height: 60px;
+    border-radius: 12px;
+    background-color: $color-icon-title-button;
+    font-family: $font-family;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 24px;
+    margin-top: 13px 18px 13px 18px;
+}
+
+.section4__comparte--button-twitter {
+  box-sizing: border-box;
+  width: 181px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #00a0f5;
+  font-family: $font-family;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  font-size: 14px;
+  color: white;
+}
+
+// ----AYLEN ----//
+
+.button {
+  width: 75px;
+  height: 30px;
+  border-radius: 15px;
+  border: solid 1px $color-line-bottom;
+}
+
+.button-reset {
+  width: 34px;
+  height: 20px;
+  font-family: $font-family;
+  font-size: 12px;
+  line-height: 1.67px;
+  text-transform: uppercase;
 }

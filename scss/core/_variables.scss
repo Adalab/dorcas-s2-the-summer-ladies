@@ -11,3 +11,17 @@ $color-line-bottom: #979797;
 $font-title-index: 'Merriweather', serif;
 $font-family: 'Open Sans', sans-serif;
 $title-font: 'Open Sans', sans-serif;
+
+.color--orange {
+  color: $color-icon-title-button;
+}
+
+.color--grey {
+  color: $color-titles;
+}
+
+.generaltitle {
+  font-size: 18px;
+  color: $color-titles;
+  text-transform: uppercase;
+}
