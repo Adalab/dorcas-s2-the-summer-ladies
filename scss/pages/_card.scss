@@ -2,7 +2,6 @@
 // ----VERO ----//
 
 .section__4 {
-  background-color: lightblue;
   display: flex;
   flex-direction: column;
 }
@@ -11,7 +10,6 @@
   text-transform: uppercase;
   font-weight: bold;
   color: $color-titles;
-  background-color: pink;
   display: grid;
   grid-template-columns: 16px 1fr 50px;
   grid-template-rows: 1fr;
@@ -31,7 +29,6 @@
 }
 
 .section__4--comparte-created {
-  background-color: lime;
   margin: auto;
   display: flex;
   flex-direction: column;
