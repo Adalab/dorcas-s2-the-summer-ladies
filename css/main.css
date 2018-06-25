@@ -87,7 +87,6 @@ body {
 }
 
 .home__subtitle {
-  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   color: #114e4e;
   padding-bottom: 14px;
@@ -112,7 +111,6 @@ body {
 
 .home__links--name {
   display: block;
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #54585a;
 }
@@ -129,7 +127,6 @@ body {
 }
 
 .section__4--comparte {
-  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   color: #54585a;
@@ -156,7 +153,6 @@ body {
 .section__4--comparte-created {
   background-color: lime;
   margin: auto;
-  font-family: "Open Sans", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,8 +166,11 @@ body {
   color: #54585a;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 .section__4--comparte-link {
-  font-style: "Open Sans", sans-serif;
   font-size: 12;
   color: #e17334;
 }
@@ -181,13 +180,27 @@ body {
   border-radius: 21px;
   background-color: #438792;
   border: solid 1px #979797;
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #f5f5f5;
   padding: 10px 20px;
 }
 
+<<<<<<< HEAD
+=======
+.section4__comparte--containerbutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+>>>>>>> 342dc84ef369d4df83ef25b158f60f11959a1ec3
 .section4__comparte--buttonstyle {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -195,13 +208,17 @@ body {
   height: 60px;
   border-radius: 12px;
   background-color: #e17334;
+<<<<<<< HEAD
   font-family: "Open Sans", sans-serif;
+=======
+>>>>>>> 342dc84ef369d4df83ef25b158f60f11959a1ec3
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   color: white;
   -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+<<<<<<< HEAD
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 24px;
@@ -231,6 +248,37 @@ body {
   line-height: 1.67px;
   text-transform: uppercase;
   background-color: linear-gradient(#bfcdd0, #dde9ed);
+=======
+  margin-top: 13px 18px 13px 18px;
+}
+
+.section4__comparte--button-twitter {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 181px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #00a0f5;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  font-size: 14px;
+  color: white;
+}
+
+.button {
+  width: 75px;
+  height: 30px;
+  border-radius: 15px;
+  border: solid 1px #979797;
+}
+
+.button-reset {
+  width: 34px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 1.67px;
+  text-transform: uppercase;
+>>>>>>> 342dc84ef369d4df83ef25b158f60f11959a1ec3
 }
 
 .form {
@@ -296,6 +344,7 @@ body {
 .form__rellena--file input {
   border: 0px;
   width: 85%;
+<<<<<<< HEAD
 }
 
 .visor {
@@ -307,6 +356,8 @@ body {
 .visor__view {
   width: 240px;
   text-align: center;
+=======
+>>>>>>> 342dc84ef369d4df83ef25b158f60f11959a1ec3
 }
 
 @media all and (min-width: 768px) {

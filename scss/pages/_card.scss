@@ -8,7 +8,6 @@
 }
 
 .section__4--comparte {
-  font-family: $font-family;
   text-transform: uppercase;
   font-weight: bold;
   color: $color-titles;
@@ -34,7 +33,6 @@
 .section__4--comparte-created {
   background-color: lime;
   margin: auto;
-  font-family: $font-family;
   display: flex;
   flex-direction: column;
   align-items: center;
