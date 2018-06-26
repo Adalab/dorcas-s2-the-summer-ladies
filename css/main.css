@@ -227,6 +227,26 @@ body {
   color: white;
 }
 
+.visor__button-reset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 75px;
+  height: 30px;
+  border-radius: 15px;
+  border: solid 1px #f5f5f5;
+  color: #54585a;
+  font-size: 12px;
+  line-height: 1.67px;
+  text-transform: uppercase;
+  background: none;
+}
+
 .form__rellena--button {
   width: 140px;
   height: 30px;
@@ -295,22 +315,42 @@ body {
   width: 85%;
 }
 
-.visor {
+.container__visor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#bfcdd0), to(#dde9ed));
   background-image: linear-gradient(#bfcdd0, #dde9ed);
   width: 100%;
 }
 
 .visor__view {
-  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: auto;
   width: 240px;
+  border: 1px solid black;
 }
 
-.visor__rectangle {
-  display: block;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.visor__container1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 240px;
+  margin: auto;
   padding: 60px 35px 30px 45px;
 }
 
@@ -327,6 +367,19 @@ body {
   line-height: 20px;
   color: #54585a;
   font-family: "Open Sans", sans-serif;
+}
+
+.visor__view-a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
 }
 
 @media all and (min-width: 768px) {

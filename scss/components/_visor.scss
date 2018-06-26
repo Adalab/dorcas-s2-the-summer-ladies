@@ -1,24 +1,30 @@
-.visor {
+.container__visor {
+  display: flex;
+  flex-direction: column;
   background-image: $color-card-background;
   width: 100%;
 }
 
 .visor__view {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
   width: 240px;
+  border: 1px solid black;
 }
 
-.visor__rectangle {
-  display: block;
-  align-items: center;
+.visor__container1 {
+display: flex;
+flex-direction: column;
+width: 240px;
+margin: auto;
 padding: 60px 35px 30px 45px;
-
 }
+
 
 .visor__view-name {
   font-size: 18px;
   line-height: 20px;
-
   color: $indexfont-color;
   text-transform: capitalize;
   font-family: $font-primary;
@@ -34,4 +40,11 @@ padding: 60px 35px 30px 45px;
 
 .visor__image {
 
+}
+
+.visor__view-a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
