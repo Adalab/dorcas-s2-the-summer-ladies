@@ -332,6 +332,22 @@ body {
 }
 
 @media all and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 330px;
+    grid-template-rows: 1fr;
+    grid-gap: 30px;
+  }
+
+  .container__visor {
+    grid-column-start: 2;
+    background-color: pink;
+  }
+
+  .container__form {
+    grid-column-start: 1;
+  }
+
   .home {
     max-width: 420px;
     margin: 348px auto 60px;
