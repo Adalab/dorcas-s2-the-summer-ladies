@@ -328,6 +328,26 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#bfcdd0), to(#dde9ed));
   background-image: linear-gradient(#bfcdd0, #dde9ed);
   width: 100%;
+  border: 1px solid green;
+}
+
+.visor__container1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  width: 240px;
+  margin: auto;
+  padding: 60px 35px 30px 45px;
+  border: 1px solid blue;
 }
 
 .visor__view {
@@ -340,33 +360,30 @@ body {
   flex-direction: column;
   margin: auto;
   width: 240px;
+  height: 367px;
   border: 1px solid black;
-}
-
-.visor__container1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 240px;
-  margin: auto;
-  padding: 60px 35px 30px 45px;
 }
 
 .visor__view-name {
   font-size: 18px;
   line-height: 20px;
+  margin-left: 20px;
+  padding: 20px 20px 14px 0;
   color: #114e4e;
   text-transform: capitalize;
   font-family: "Open Sans", sans-serif;
 }
 
+.visor__image-foto {
+  width: 240px;
+  height: 200px;
+  padding-top: 10px;
+}
+
 .visor__view-profession {
   font-size: 16px;
   line-height: 20px;
+  margin-left: 20px;
   color: #54585a;
   font-family: "Open Sans", sans-serif;
 }
@@ -382,6 +399,42 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
+}
+
+.visor__view-a-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  color: #114e4e;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+}
+
+.border-top {
+  width: 240px;
+  border: 2px #438792;
+}
+
+.visor__list-text-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+  padding-top: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  border-radius: 4px;
 }
 
 @media all and (min-width: 768px) {
