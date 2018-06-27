@@ -1,12 +1,12 @@
 
 // ----VERO ----//
 
-.section__4 {
+ .container__comparte {
   display: flex;
   flex-direction: column;
 }
 
-.section__4--comparte {
+.container__comparte--icon {
   text-transform: uppercase;
   font-weight: bold;
   color: $color-titles;
@@ -17,21 +17,19 @@
   margin-top: 10px;
 }
 
-.section__4--comparte-click {
+.container__comparte--click {
   margin-left: 12px;
 }
-
-.section__4--comparte-button {
-  width: 100%;
-  height: 100px;
-  text-align: center;
-
-}
-
-.section__4--comparte-created {
+.container--comparte-created {
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: $color-titles;
+}
+.container--comparte-link {
+  color: $color-icon-title-button;
+}
+.fa-share-alt{
+  color: $color-icon-title-button;
 }

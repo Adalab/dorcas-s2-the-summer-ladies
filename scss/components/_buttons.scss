@@ -17,13 +17,16 @@
 
 // ----VERO ----//
 
-.section4__comparte--containerbutton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .container__comparte--button {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.section4__comparte--buttonstyle {
+.container__comparte--buttonstyle {
     box-sizing: border-box;
     width: 199px;
     height: 50px;
@@ -37,7 +40,7 @@
     margin-top: 13px 18px 13px 18px;
 }
 
-.section4__comparte--button-twitter {
+.container__comparte--button-twitter {
   box-sizing: border-box;
   width: 181px;
   height: 30px;
@@ -51,12 +54,26 @@
 // ----AYLEN ----//
 
 .visor__button-reset {
-  padding: 10px 5px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 75px;
+  height: 30px;
   border-radius: 15px;
   border: solid 1px $color-background;
   color: $color-titles;
   font-size: 12px;
   line-height: 1.67px;
   text-transform: uppercase;
-  background-color: $color-card-background;
+  background: none;
+}
+
+// ----ANDRE ----//
+.form__rellena--button {
+  width: 140px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: $color-icon-title-button;
+  color: white;
 }

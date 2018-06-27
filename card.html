@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:400,600" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <title>Card</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!-- vero -->
+  <header>
+    <a href="index.html">
+      <img class="header__logo" src=images/logo.svg></a>
+    </a>
+  </header>
+  <main class="container">
+    <section class="container__visor">
+      <p>Hola caracola</p>
+    </section>
+    <section class="container__form">
+      <div class="container__form--diseña">
+
+      </div>
+<!-- andre -->
+      <div class="container__form--rellena">
+        <div class="form">
+          <div class="titulo__rellena"> <i class="fas fa-keyboard color--orange"></i> <h2 class= "generaltitle">rellena</h2><i class="fas fa-angle-up color--grey"></i> </div>
+          <form class="form__rellena" action="/my-handling-form-page" method="post">
+            <fieldset>
+              <div class="form__rellena--step">
+                <label for="name">Nombre completo</label>
+                <input placeholder="Ej: Sally Hill" type="text" id="name"/>
+              </div>
+              <div class="form__rellena--step">
+                <label for="position">Puesto</label>
+                <input placeholder="Front end Unicorn" type="text" id="position"/>
+              </div>
+              <div class="form__rellena--file">
+                <label for="imagen">Imagen de Perfil</label>
+                <input type="file" id="imagen"/>
+                <a href="#" id="reloadimage"> <div class="form__rellena--reload"> </div></a>
+                <button type="button" name="button" class="form__rellena--button">Añadir imagen</button>
+              </div>
+              <div class="form__rellena--step">
+                <label for="email">Email</label>
+                <input placeholder="sallyhill@gmail.com" type="text" id="email"/>
+              </div>
+              <div class="form__rellena--step">
+                <label for="phone">Telefono</label>
+                <input placeholder="555-55-55-55" type="text" id="phone"/>
+              </div>
+              <div class="form__rellena--step">
+                <label for="linkedin">Linkedin</label>
+                <input placeholder="ej:linkedin.com/in/sally-hill" type="linkedin" id="linkedin"/>
+              </div>
+              <div class="form__rellena--step">
+                <label for="github">Github</label>
+                <input placeholder="@sally-hill" type="text" id="linkedin"/>
+              </div>
+            </fieldset>
+            <fieldset>
+              <div class="form__rellena--skills">
+                <label for="skills">Habilidades (máximo 3)</label>
+                <select id="skills" name="skills">
+                  <option>CSS</option>
+                  <option>HTML</option>
+                  <option>JS</option>
+                </select>
+                <a href="#" id="reloadimage"> <div class="form__rellena--plus color--orange"> <i class="fas fa-plus color--orange"></i> </div> </a>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+<!-- vero -->
+      <div class="container__comparte">
+        <div class="container__comparte--icon">
+          <i class="fas fa-share-alt"></i>
+          <p class="container__comparte--click">Comparte</p>
+          <i class="fas fa-angle-up"></i>
+        </div>
+        <div class="container__comparte--button">
+          <div>
+            <button type="button" name="button" class="container__comparte--buttonstyle">
+              <i class="far fa-address-card"></i> Crear tarjeta
+            </button>
+          </div>
+        </div>
+        <div class="container--comparte-created">
+          <p>La tarjeta ha sido creada:</p>
+          <a class="container--comparte-link" href="https://url.com">https://awesome-profile-card.com?id=A456DF0001</a>
+          <button type="button" name="button" class="container__comparte--button-twitter">
+            <i class="fab fa-twitter"></i> Compartir en Twitter
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Awesome profile-cards @2018</p>
+    <a href="http://www.adalab.es/">
+      <img class="footer__logo" src=images/logo-adalab-80px.png></a>
+    </a>
+  </footer>
+  <script src="js/main.min.js" ></script>
+</body>
+</html>
