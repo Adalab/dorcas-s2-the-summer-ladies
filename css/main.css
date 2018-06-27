@@ -49,6 +49,7 @@ footer {
 .footer__logo {
   max-width: 103px;
   max-height: 40px;
+  margin-top: 10px;
 }
 
 * {
@@ -115,11 +116,7 @@ body {
   color: #54585a;
 }
 
-<<<<<<< HEAD
-.section__4 {
-=======
 .container__comparte {
->>>>>>> 7fb92138beb838909a14f70bdedd1b45bbdd2139
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,24 +137,17 @@ body {
   -ms-flex-align: center;
   align-items: center;
   margin-top: 10px;
+  padding-left: 23px;
 }
 
 .container__comparte--click {
   margin-left: 12px;
+  font-size: 18px;
 }
 
-<<<<<<< HEAD
-.section__4--comparte-button {
-  width: 100%;
-  height: 100px;
-  text-align: center;
-}
-
-.section__4--comparte-created {
-=======
 .container--comparte-created {
->>>>>>> 7fb92138beb838909a14f70bdedd1b45bbdd2139
-  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,6 +163,7 @@ body {
 
 .container--comparte-link {
   color: #e17334;
+  font-size: 12px;
 }
 
 .fa-share-alt {
@@ -199,14 +190,10 @@ body {
   padding: 10px 20px;
 }
 
-<<<<<<< HEAD
-.section4__comparte--containerbutton {
-=======
 .container__comparte--button {
   width: 100%;
   height: 100px;
   text-align: center;
->>>>>>> 7fb92138beb838909a14f70bdedd1b45bbdd2139
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,11 +205,7 @@ body {
   align-items: center;
 }
 
-<<<<<<< HEAD
-.section4__comparte--buttonstyle {
-=======
 .container__comparte--buttonstyle {
->>>>>>> 7fb92138beb838909a14f70bdedd1b45bbdd2139
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 199px;
@@ -249,6 +232,7 @@ body {
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
   font-size: 14px;
   color: white;
+  margin-top: 10px;
 }
 
 .visor__button-reset {
@@ -268,15 +252,6 @@ body {
   font-size: 12px;
   line-height: 1.67px;
   text-transform: uppercase;
-<<<<<<< HEAD
-  background-color: linear-gradient(#bfcdd0, #dde9ed);
-}
-
-.form {
-  display: grid;
-  grid-column: "1fr";
-  grid-row: "2fr";
-=======
   background: none;
 }
 
@@ -289,7 +264,6 @@ body {
 }
 
 body {
->>>>>>> 7fb92138beb838909a14f70bdedd1b45bbdd2139
   background-color: white;
 }
 
@@ -392,9 +366,6 @@ body {
   flex-direction: column;
   margin: auto;
   width: 240px;
-<<<<<<< HEAD
-  text-align: center;
-=======
   height: 367px;
   border: 1px solid black;
 }
@@ -470,7 +441,6 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   border-radius: 4px;
->>>>>>> 7fb92138beb838909a14f70bdedd1b45bbdd2139
 }
 
 @media all and (min-width: 768px) {
