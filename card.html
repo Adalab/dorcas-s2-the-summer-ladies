@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<!-- vero -->
+  <!-- vero -->
   <header>
     <a href="index.html">
       <img class="header__logo" src=images/logo.svg></a>
@@ -20,11 +20,33 @@
     <section class="container__visor">
       <p>Hola caracola</p>
     </section>
+    <!-- Aylen -->
     <section class="container__form">
       <div class="container__form--diseña">
-
+        <div class="title__diseña"> <i class="far fa-object-ungroup color--orange"></i> <h2 class= "generaltitle">Diseña</h2><i class="fas fa-angle-up color--grey"></i> </div>
+        <div class="form__diseña--fontsColors">
+          <h3 class="title__colors">colores</h3>
+          <div class="form__colors">
+            <input id="option1" type="radio" value="palette1" name="greencolors"/>
+            <label for="option1"> <div class="colors__palets darkBlue"> </div> <div class="colors__palets mediumBlue"> </div> <div class="colors__palets lightBlue"> </div> </label>
+            <input id="option2" type="radio" value="palette2" name="redcolors"/>
+            <label for="option2"><div class="colors__palets darkRed"> </div> <div class="colors__palets mediumRed"> </div> <div class="colors__palets lightRed"> </div></label>
+            <input id="option3" type="radio" value="palette3" name="greycolors"/>
+            <label for="option3"><div class="colors__palets darkGrey"> </div> <div class="colors__palets mediumGrey"> </div> <div class="colors__palets lightGrey"> </div></label>
+          </div>
+          <h3 class="title__fonts">fuentes</h3>
+          <div class="form__fonts">
+            <input id="font1" type="radio" value="f1" name="ubuntu" />
+            <label for="font1">ubuntu</label><br>
+            <input id="font2" type="radio" value="f2" name="comic" />
+            <label for="font2">comic sans</label><br>
+            <input id="font3" type="radio" value="f3" name="montserrat" />
+            <label for="font3">montserrat</label>
+          </div>
+        </div>
       </div>
-<!-- andre -->
+      <hr class="hr__card"> 
+      <!-- andre -->
       <div class="container__form--rellena">
         <div class="form">
           <div class="titulo__rellena"> <i class="fas fa-keyboard color--orange"></i> <h2 class= "generaltitle">rellena</h2><i class="fas fa-angle-up color--grey"></i> </div>
@@ -75,12 +97,12 @@
           </form>
         </div>
       </div>
-      <hr>
+      <hr class="hr__card">
 <!-- vero -->
       <div class="container__comparte">
         <div class="container__comparte--icon">
           <i class="fas fa-share-alt"></i>
-          <h2 class="container__comparte--click">Comparte</h2>
+          <h2 class="generaltitle">Comparte</h2>
           <i class="fas fa-angle-up color--grey"></i>
         </div>
         <div class="container__comparte--button">
@@ -90,19 +112,20 @@
             </button>
           </div>
         </div>
-        <hr>
+        <hr class="hr__card">
         <div class="container--comparte-created">
           <p>La tarjeta ha sido creada:</p>
           <a class="container--comparte-link" href="https://url.com">https://awesome-profile-card.com?id=A456DF0001</a>
           <button type="button" name="button" class="container__comparte--button-twitter">
             <i class="fab fa-twitter"></i> Compartir en Twitter
           </button>
-        </hr>
+        <hr class="hr__card">
         </div>
       </div>
     </section>
+   <hr> 
   </main>
-  <footer>
+  <footer> 
     <p>Awesome profile-cards @2018</p>
     <a href="http://www.adalab.es/">
       <img class="footer__logo" src=images/logo-adalab-80px.png></a>

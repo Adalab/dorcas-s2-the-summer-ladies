@@ -1,3 +1,23 @@
+.form__diseña--fontsColors {
+  display: grid;
+  grid-template-columns: 1fr 135px;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 80px;
+  padding: 25px 20px 30px 20px;  
+}
+
+.title__colors {
+grid-column: 1;
+grid-row: 1;
+font-size: 14px;
+color: $color-titles;
+text-transform: uppercase; 
+}
+
+.form__colors {
+  grid-column: 2;
+  grid-row: 1;
+}
 @media all and (min-width:768px) {
   .container {
     display: grid;
@@ -14,4 +34,16 @@
     grid-column-start: 1;
     grid-row: 1;
   }
+}
+
+.title__fonts {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 14px;
+  color: $color-titles;
+  text-transform: uppercase; 
+}
+.form__fonts {
+  grid-column: 2;
+  grid-row: 2;
 }
