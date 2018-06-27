@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .color--orange {
   color: #e17334;
 }
@@ -23,6 +25,33 @@ header {
 .header__logo {
   max-width: 201px;
   max-height: 51px;
+}
+
+.form__diseña--fontsColors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 80px;
+}
+
+.title__colors {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.form__colors {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.title__fonts {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.form__fonts {
+  grid-column: 2;
+  grid-row: 2;
 }
 
 footer {
@@ -315,6 +344,13 @@ body {
 .form__rellena--file input {
   border: 0px;
   width: 85%;
+}
+
+.colors__palets {
+  border: solid 1px #a2deaf;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
 }
 
 .container__visor {
