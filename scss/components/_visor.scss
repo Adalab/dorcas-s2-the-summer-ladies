@@ -21,7 +21,6 @@
   flex-direction: column;
   margin: auto;
   width: 240px;
-  // height: 367px;
   border: 1px solid black;
 }
 
@@ -59,8 +58,6 @@
 
 .visor__view-a-list {
   display: flex;
-
-
   color: $indexfont-color;
   list-style: none;
   width: 100%;
@@ -76,8 +73,22 @@
   border: 2px solid $colorline;
   border-radius: 50%;
   text-decoration: none;
+  list-style: none;
   margin-right: 10px;
+  color: $indexfont-color;
 }
+.rss
+.fas
+.fa-mobile-alt {
+  padding-left: 10px;
+}
+
+.rrss
+.fab
+.fa-github-alt {
+  text-decoration: none;
+}
+
 
 .border-top {
   height: 2px;
@@ -95,7 +106,6 @@
 .visor__skills {
   display: flex;
   align-items: center;
-
 }
 
 
