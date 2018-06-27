@@ -144,7 +144,11 @@ body {
   color: #54585a;
 }
 
+<<<<<<< HEAD
+.section__4 {
+=======
 .container__comparte {
+>>>>>>> 7fb92138beb838909a14f70bdedd1b45bbdd2139
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,7 +175,17 @@ body {
   margin-left: 12px;
 }
 
+<<<<<<< HEAD
+.section__4--comparte-button {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+
+.section__4--comparte-created {
+=======
 .container--comparte-created {
+>>>>>>> 7fb92138beb838909a14f70bdedd1b45bbdd2139
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,10 +228,14 @@ body {
   padding: 10px 20px;
 }
 
+<<<<<<< HEAD
+.section4__comparte--containerbutton {
+=======
 .container__comparte--button {
   width: 100%;
   height: 100px;
   text-align: center;
+>>>>>>> 7fb92138beb838909a14f70bdedd1b45bbdd2139
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,11 +247,15 @@ body {
   align-items: center;
 }
 
+<<<<<<< HEAD
+.section4__comparte--buttonstyle {
+=======
 .container__comparte--buttonstyle {
+>>>>>>> 7fb92138beb838909a14f70bdedd1b45bbdd2139
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 199px;
-  height: 60px;
+  height: 50px;
   border-radius: 12px;
   background-color: #e17334;
   font-size: 18px;
@@ -275,6 +297,15 @@ body {
   font-size: 12px;
   line-height: 1.67px;
   text-transform: uppercase;
+<<<<<<< HEAD
+  background-color: linear-gradient(#bfcdd0, #dde9ed);
+}
+
+.form {
+  display: grid;
+  grid-column: "1fr";
+  grid-row: "2fr";
+=======
   background: none;
 }
 
@@ -287,6 +318,7 @@ body {
 }
 
 body {
+>>>>>>> 7fb92138beb838909a14f70bdedd1b45bbdd2139
   background-color: white;
 }
 
@@ -382,7 +414,6 @@ body {
   align-content: center;
   width: 240px;
   margin: auto;
-  padding: 60px 35px 30px 45px;
   border: 1px solid blue;
 }
 
@@ -396,7 +427,13 @@ body {
   flex-direction: column;
   margin: auto;
   width: 240px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  text-align: center;
+=======
   height: 367px;
+>>>>>>> af06fa96ad76e40c1e46e86abcf1489f12a50457
   border: 1px solid black;
 }
 
@@ -434,43 +471,91 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 100%;
+  height: 52px;
 }
 
 .visor__view-a-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
   color: #114e4e;
   list-style: none;
-  margin: 0;
   width: 100%;
+  text-decoration: none;
+}
+
+.rrss {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #a2deaf;
+  border-radius: 50%;
+  text-decoration: none;
+  margin-right: 10px;
 }
 
 .border-top {
-  width: 240px;
-  border: 2px #438792;
+  height: 2px;
+  background-color: #438792;
+}
+
+.visor__view-list-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 38px;
+}
+
+.visor__skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .visor__list-text-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   list-style: none;
   margin: 0;
-  width: 100%;
-  padding-top: 15px;
+  height: 18px;
+  padding: 0 5px;
+  margin-right: 10px;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
+  background-color: #438792;
   border-radius: 4px;
+<<<<<<< HEAD
+  text-transform: uppercase;
+  color: #f5f5f5;
+}
+
+.visor__list-text-icon span {
+  margin: 0;
+  padding: 0;
+=======
+>>>>>>> 7fb92138beb838909a14f70bdedd1b45bbdd2139
+>>>>>>> af06fa96ad76e40c1e46e86abcf1489f12a50457
 }
 
 @media all and (min-width: 768px) {
