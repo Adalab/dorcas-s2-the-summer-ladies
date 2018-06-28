@@ -294,6 +294,7 @@ body {
   line-height: 1.67px;
   text-transform: uppercase;
   background: none;
+  margin-left: 0;
 }
 
 .form__rellena--button {
@@ -399,6 +400,10 @@ body {
   border: 1px solid green;
 }
 
+.visor__name-subname {
+  background-color: #f5f5f5;
+}
+
 .visor__container1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -437,13 +442,12 @@ body {
   padding: 20px 20px 14px 0;
   color: #114e4e;
   text-transform: capitalize;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", san-serif;
 }
 
 .visor__image-foto {
   width: 240px;
   height: 200px;
-  padding-top: 10px;
 }
 
 .visor__view-profession {
@@ -451,7 +455,8 @@ body {
   line-height: 20px;
   margin-left: 20px;
   color: #54585a;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", san-serif;
+  padding-bottom: 10px;
 }
 
 .visor__view-a {
@@ -465,6 +470,7 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 52px;
+  margin-left: 10px;
 }
 
 .visor__view-a-list {
@@ -474,6 +480,11 @@ body {
   color: #114e4e;
   list-style: none;
   width: 100%;
+  text-decoration: none;
+  background-color: linear-gradient(#bfcdd0, #dde9ed);
+}
+
+.link {
   text-decoration: none;
 }
 
@@ -495,18 +506,6 @@ body {
   list-style: none;
   margin-right: 10px;
   color: #114e4e;
-}
-
-.rss
-.fas
-.fa-mobile-alt {
-  padding-left: 10px;
-}
-
-.rrss
-.fab
-.fa-github-alt {
-  text-decoration: none;
 }
 
 .border-top {
@@ -533,6 +532,14 @@ body {
   align-items: center;
 }
 
+.list {
+  background-color: linear-gradient(#bfcdd0, #dde9ed);
+}
+
+.visor__view-a {
+  background-color: linear-gradient(#bfcdd0, #dde9ed);
+}
+
 .visor__list-text-icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -548,6 +555,7 @@ body {
   height: 18px;
   padding: 0 5px;
   margin-right: 10px;
+  margin-left: 10px;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   background-color: #438792;
