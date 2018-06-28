@@ -1,5 +1,12 @@
 'use strict';
 
-console.log('>> Ready :D');
+var selectorRellena = document.querySelector('.titulo__rellena');
+var formularioRellena = document.querySelector('.form__rellena');
 
-console.log()
+
+function plegar() {
+    formularioRellena.classList.toggle("form__oculto");
+    
+}
+
+selectorRellena.addEventListener("click", plegar);

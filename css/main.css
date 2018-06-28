@@ -561,6 +561,10 @@ body {
   padding: 0;
 }
 
+.form__oculto {
+  display: none;
+}
+
 @media all and (min-width: 768px) {
   .container {
     display: grid;
