@@ -9,3 +9,56 @@
     margin-top: 27px;
     padding-left: 23px;  
   }
+
+.colors__container {
+  display: flex;
+  align-items: center;
+}
+
+.darkBlue {
+  background-color: $darkBlue; 
+}
+
+.mediumBlue {
+  background-color: $mediumBlue; 
+}
+
+.lightBlue {
+  background-color: $lightBlue; 
+}
+
+.darkRed {
+  background-color: $darkRed; 
+}
+
+.mediumRed {
+  background-color: $mediumRed; 
+}
+
+.lightRed {
+  background-color: $lightRed; 
+}
+
+.darkGrey {
+  background-color: $darkGrey; 
+}
+
+.mediumGrey {
+  background-color: $mediumGrey; 
+}
+
+.lightGrey {
+  background-color: $lightGrey; 
+}
+
+.fonts__container {
+  text-transform: capitalize;
+}
+
+.comic {
+
+}
+
+.montserrat {
+  font-family: $font-title-index;
+}
