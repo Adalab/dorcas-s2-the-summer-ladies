@@ -30,9 +30,9 @@ header {
 
 .form__diseña--fontsColors {
   display: grid;
-  grid-template-columns: 1fr 135px;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 80px;
+  grid-gap: 30px;
   padding: 25px 20px 30px 20px;
 }
 
@@ -372,6 +372,14 @@ body {
   display: inline-block;
 }
 
+.colors__container {
+  display: block;
+}
+
+.fonts__container {
+  display: block;
+}
+
 .title__diseña {
   text-transform: uppercase;
   font-weight: bold;
@@ -384,6 +392,59 @@ body {
   align-items: center;
   margin-top: 27px;
   padding-left: 23px;
+}
+
+.colors__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.darkBlue {
+  background-color: #114e4e;
+}
+
+.mediumBlue {
+  background-color: #438792;
+}
+
+.lightBlue {
+  background-color: #a2deaf;
+}
+
+.darkRed {
+  background-color: #420101;
+}
+
+.mediumRed {
+  background-color: #bd1010;
+}
+
+.lightRed {
+  background-color: #e95626;
+}
+
+.darkGrey {
+  background-color: #3e5b65;
+}
+
+.mediumGrey {
+  background-color: #dfe5eb;
+}
+
+.lightGrey {
+  background-color: #a0c0cf;
+}
+
+.fonts__container {
+  text-transform: capitalize;
+}
+
+.montserrat {
+  font-family: "Merriweather", serif;
 }
 
 .container__visor {
@@ -567,6 +628,10 @@ body {
 .visor__list-text-icon span {
   margin: 0;
   padding: 0;
+}
+
+.form__oculto {
+  display: none;
 }
 
 @media all and (min-width: 768px) {
