@@ -13,6 +13,8 @@
 .colors__container {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  width: 120px;
 }
 
 .darkBlue {
@@ -53,6 +55,9 @@
 
 .fonts__container {
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .comic {
