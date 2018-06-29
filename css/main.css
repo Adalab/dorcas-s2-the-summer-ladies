@@ -498,6 +498,7 @@ body {
   margin: auto;
   width: 240px;
   border: 1px solid black;
+  background-color: #f5f5f5;
 }
 
 .visor__view-name {
@@ -546,7 +547,6 @@ body {
   list-style: none;
   width: 100%;
   text-decoration: none;
-  background-color: linear-gradient(#bfcdd0, #dde9ed);
 }
 
 .link {
@@ -573,11 +573,6 @@ body {
   color: #114e4e;
 }
 
-.border-top {
-  height: 2px;
-  background-color: #438792;
-}
-
 .visor__view-list-txt {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -586,6 +581,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   height: 38px;
+  border-top: 2px solid #438792;
 }
 
 .visor__skills {
@@ -595,14 +591,6 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.list {
-  background-color: linear-gradient(#bfcdd0, #dde9ed);
-}
-
-.visor__view-a {
-  background-color: linear-gradient(#bfcdd0, #dde9ed);
 }
 
 .visor__list-text-icon {
@@ -678,7 +666,7 @@ body {
 
   .home__links {
     border-radius: 5px;
-    border: 2px;
+    border-width: 2px;
   }
 
   .home__button {
