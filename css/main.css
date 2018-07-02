@@ -329,9 +329,18 @@ body {
   height: 30px;
 }
 
-.titulo__rellena * {
-  display: inline;
-  padding: 10px;
+.titulo__rellena {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #54585a;
+  display: grid;
+  grid-template-columns: 16px 1fr 50px;
+  grid-template-rows: 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 27px;
+  padding-left: 23px;
 }
 
 .form__rellena--plus {
