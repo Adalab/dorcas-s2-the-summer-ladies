@@ -1,4 +1,3 @@
-
 // ----VERO ----//
 
 .container {
@@ -22,12 +21,12 @@
   grid-template-columns: 16px 1fr 50px;
   grid-template-rows: 1fr;
   align-items: center;
-  padding-left: 23px;  
+  padding-left: 23px;
 }
 
 .container__comparte--click {
   margin-left: 12px;
-  font-size: 18px;  
+  font-size: 18px;
 }
 .container--comparte-created {
   margin-top: 20px;
@@ -44,4 +43,3 @@
 .fa-share-alt{
   color: $color-icon-title-button;
 }
-

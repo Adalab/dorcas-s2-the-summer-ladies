@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 .color--orange {
   color: #e17334;
 }
@@ -28,7 +26,7 @@ header {
   max-height: 51px;
 }
 
-.form__diseña--fontsColors {
+.form__disena--fontsColors {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -371,7 +369,7 @@ body {
   display: inline-block;
 }
 
-.title__diseña {
+.title__disena {
   text-transform: uppercase;
   font-weight: bold;
   color: #54585a;
@@ -385,6 +383,22 @@ body {
   padding-left: 23px;
 }
 
+.form__colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .colors__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,6 +410,26 @@ body {
   -ms-flex-pack: end;
   justify-content: flex-end;
   width: 120px;
+  margin: auto;
+}
+
+.div_colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.point {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.point1 {
+  margin-right: 8px;
 }
 
 .darkBlue {
@@ -442,9 +476,10 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+}
+
+.form__fonts {
+  margin: auto;
 }
 
 .montserrat {

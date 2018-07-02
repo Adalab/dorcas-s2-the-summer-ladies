@@ -5,11 +5,9 @@
   width: 100%;
   border: 1px solid green;
 }
-
 .visor__name-subname {
   background-color: $color-background;
 }
-
 .visor__container1 {
   display: flex;
   flex-direction: column;
@@ -26,9 +24,7 @@
   width: 240px;
   border: 1px solid black;
   background-color: $color-background;
-  
 }
-
 .visor__view-name {
   font-size: 18px;
   line-height: 20px;
@@ -38,14 +34,10 @@
   text-transform: capitalize;
   font-family: $comic-sans;
 }
-
 .visor__image-foto {
   width: 240px;
   height: 200px;
-
   }
-
-
 .visor__view-profession {
   font-size: 16px;
   line-height: 20px;
@@ -54,16 +46,13 @@
   font-family: $comic-sans;
   padding-bottom: 10px;
 }
-
 .visor__view-a {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 52px;
   margin-left: 10px;
-  
 }
-
 .visor__view-a-list {
   display: flex;
   color: $indexfont-color;
@@ -71,12 +60,9 @@
   width: 100%;
   text-decoration: none;
   }
-
   .link {
   text-decoration: none;
 }
-
-
 .rrss {
   display: flex;
   justify-content: center;
@@ -90,23 +76,16 @@
   margin-right: 10px;
   color: $indexfont-color;
 }
-
-
 .visor__view-list-txt {
   display: flex;
   align-items: center;
   height: 38px;
   border-top: 2px solid $color-general-buttons;
 }
-
-
-
 .visor__skills {
   display: flex;
-  align-items: center;  
+  align-items: center;
 }
-
-
 .visor__list-text-icon {
   display: flex;
   justify-content: center;
@@ -123,10 +102,8 @@
   border-radius: 4px;
   text-transform: uppercase;
   color: $color-background;
-
     span {
       margin: 0;
       padding: 0;
-
     }
 }

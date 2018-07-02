@@ -14,7 +14,7 @@ var uglify       = require('gulp-uglify');
 
 
 
-// > Procesa los archivos SASS/SCSS, añade sourcemaps y autoprefixer
+// > Procesa los archivos SASS/SCSS, anade sourcemaps y autoprefixer
 gulp.task('styles', function(done) {
   gulp.src(config.scss.src)
     .pipe(sourcemaps.init())
