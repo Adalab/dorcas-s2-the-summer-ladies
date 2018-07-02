@@ -7,52 +7,57 @@
     grid-template-rows: 1fr;
     align-items: center;
     margin-top: 27px;
-    padding-left: 23px;  
+    padding-left: 23px;
   }
 
 .colors__container {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  width: 120px;
 }
 
 .darkBlue {
-  background-color: $darkBlue; 
+  background-color: $darkBlue;
 }
 
 .mediumBlue {
-  background-color: $mediumBlue; 
+  background-color: $mediumBlue;
 }
 
 .lightBlue {
-  background-color: $lightBlue; 
+  background-color: $lightBlue;
 }
 
 .darkRed {
-  background-color: $darkRed; 
+  background-color: $darkRed;
 }
 
 .mediumRed {
-  background-color: $mediumRed; 
+  background-color: $mediumRed;
 }
 
 .lightRed {
-  background-color: $lightRed; 
+  background-color: $lightRed;
 }
 
 .darkGrey {
-  background-color: $darkGrey; 
+  background-color: $darkGrey;
 }
 
 .mediumGrey {
-  background-color: $mediumGrey; 
+  background-color: $mediumGrey;
 }
 
 .lightGrey {
-  background-color: $lightGrey; 
+  background-color: $lightGrey;
 }
 
 .fonts__container {
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .comic {
