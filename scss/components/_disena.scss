@@ -7,7 +7,6 @@
     grid-template-rows: 1fr;
     align-items: center;
     margin-top: 27px;
-    padding-left: 23px;
   }
 .form__colors {
   display: flex;
@@ -37,47 +36,42 @@
 .darkBlue {
   background-color: $darkBlue;
 }
-
 .mediumBlue {
   background-color: $mediumBlue;
 }
-
 .lightBlue {
   background-color: $lightBlue;
 }
-
 .darkRed {
   background-color: $darkRed;
 }
-
 .mediumRed {
   background-color: $mediumRed;
 }
-
 .lightRed {
   background-color: $lightRed;
 }
-
 .darkGrey {
   background-color: $darkGrey;
 }
-
 .mediumGrey {
   background-color: $mediumGrey;
 }
-
 .lightGrey {
   background-color: $lightGrey;
 }
-
 .fonts__container {
   text-transform: capitalize;
   display: flex;
   align-items: center;
-  }
+}
 .form__fonts{
-    margin:auto;
-  }
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 0;
+}
 .montserrat {
   font-family: $font-title-index;
 }

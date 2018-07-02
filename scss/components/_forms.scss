@@ -2,13 +2,16 @@ body {
   background-color: white;
 }
 
-.form {
-
+.container__form--disena {
+  border-bottom: solid 1px $color-line-bottom;
 }
 
 .form__rellena {
+  padding-bottom: 21px;
+  border-bottom: solid 1px $color-line-bottom;
   fieldset{
   border: 0px;
+  margin-top: 40px;
   }
   label {
     color: $indexfont-color; /* esta variable no deberia llamarse asi porque no es solo para el index*/
@@ -31,19 +34,17 @@ body {
   grid-template-rows: 1fr;
   align-items: center;
   margin-top: 27px;
-  padding-left: 23px;
-
 }
 
 .form__rellena--plus {
-    margin-top: 60px;
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-    font-size: 12px;
-    border: solid 2px;
-    display: inline;
-    padding: 6px 9px;
+  margin-top: 60px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  border: solid 2px;
+  display: inline;
+  padding: 6px 9px;
 
 }
 

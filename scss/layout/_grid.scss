@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 30px;
-  padding: 25px 20px 30px 20px;  
+  padding-top: 25px;  
 }
 
 .title__colors {
@@ -17,6 +17,8 @@ text-transform: uppercase;
 .form__colors {
   grid-column: 2;
   grid-row: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 @media all and (min-width:768px) {
   .container {

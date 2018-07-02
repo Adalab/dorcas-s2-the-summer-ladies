@@ -31,7 +31,7 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 30px;
-  padding: 25px 20px 30px 20px;
+  padding-top: 25px;
 }
 
 .title__colors {
@@ -45,6 +45,12 @@ header {
 .form__colors {
   grid-column: 2;
   grid-row: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .title__fonts {
@@ -156,10 +162,6 @@ body {
   padding: 23px 40px;
 }
 
-.hr__card {
-  margin: 10px 20px 10px 20px;
-}
-
 .container__comparte {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,6 +170,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  padding-top: 10px;
 }
 
 .container__comparte--icon {
@@ -180,7 +183,6 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 23px;
 }
 
 .container__comparte--click {
@@ -246,6 +248,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border-bottom: solid 1px #d8d8d8;
 }
 
 .container__comparte--buttonstyle {
@@ -312,8 +315,18 @@ body {
   background-color: white;
 }
 
+.container__form--disena {
+  border-bottom: solid 1px #d8d8d8;
+}
+
+.form__rellena {
+  padding-bottom: 21px;
+  border-bottom: solid 1px #d8d8d8;
+}
+
 .form__rellena fieldset {
   border: 0px;
+  margin-top: 40px;
 }
 
 .form__rellena label {
@@ -340,7 +353,6 @@ body {
   -ms-flex-align: center;
   align-items: center;
   margin-top: 27px;
-  padding-left: 23px;
 }
 
 .form__rellena--plus {
@@ -348,7 +360,7 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 30px;
-  font-size: 12px;
+  font-size: 18px;
   border: solid 2px;
   display: inline;
   padding: 6px 9px;
@@ -389,7 +401,6 @@ body {
   -ms-flex-align: center;
   align-items: center;
   margin-top: 27px;
-  padding-left: 23px;
 }
 
 .form__colors {
@@ -489,6 +500,17 @@ body {
 
 .form__fonts {
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: 0;
 }
 
 .montserrat {
@@ -687,6 +709,24 @@ body {
   .container__form {
     grid-column-start: 1;
     grid-row: 1;
+  }
+
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 10px 40px 10px 40px;
+    height: 60px;
   }
 
   .home {

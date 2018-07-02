@@ -8,6 +8,15 @@ footer {
   justify-content: center;
   align-items: center;
   color: $credits-text;
+
+  @media all and (min-width:768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 40px 10px 40px;
+    height: 60px;
+  }
 }
 
 .footer__logo {
