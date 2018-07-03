@@ -4,6 +4,7 @@
 
 .color--grey {
   color: #54585a;
+  text-align: right;
 }
 
 .generaltitle {
@@ -29,9 +30,10 @@ header {
 .form__disena--fontsColors {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   grid-gap: 30px;
   padding-top: 25px;
+  margin-bottom: 30px;
 }
 
 .title__colors {
@@ -430,7 +432,7 @@ body {
   -ms-flex-pack: end;
   justify-content: flex-end;
   width: 120px;
-  margin: auto;
+  margin: 0 0 0 auto;
 }
 
 .div_colors {
@@ -510,7 +512,7 @@ body {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  margin-top: 0;
+  margin: 0 0 0 auto;
 }
 
 .montserrat {
