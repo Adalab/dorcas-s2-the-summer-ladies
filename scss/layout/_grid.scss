@@ -7,13 +7,15 @@
 }
 
 .title__colors {
-grid-column: 1;
-grid-row: 1;
-font-size: 14px;
-color: $color-titles;
-text-transform: uppercase; 
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 14px;
+  color: $color-titles;
+  text-transform: uppercase; 
 }
-
+.container__form {
+ background-color:  $color-options-background
+}
 .form__colors {
   grid-column: 2;
   grid-row: 1;
