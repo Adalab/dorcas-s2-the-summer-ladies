@@ -1,9 +1,10 @@
 .form__disena--fontsColors {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   grid-gap: 30px;
-  padding-top: 25px;  
+  padding-top: 25px;
+  margin-bottom: 30px;
 }
 
 .title__colors {
@@ -11,7 +12,7 @@ grid-column: 1;
 grid-row: 1;
 font-size: 14px;
 color: $color-titles;
-text-transform: uppercase; 
+text-transform: uppercase;
 }
 
 .form__colors {
@@ -43,7 +44,7 @@ text-transform: uppercase;
   grid-row: 2;
   font-size: 14px;
   color: $color-titles;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 .form__fonts {
   grid-column: 2;
