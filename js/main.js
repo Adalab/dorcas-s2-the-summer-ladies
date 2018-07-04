@@ -52,3 +52,30 @@ selectorDisena.addEventListener("click", desplegarDisena);
 selectorRellena.addEventListener("click", desplegarRellena);
 selectorComparte.addEventListener("click", desplegarComparte);
 botonCrearTarjeta.addEventListener("click", crearTarjeta);
+
+
+///foto editor//
+
+var fr = new FileReader();
+
+var uploadBtn = document.querySelector('.form__rellena--button');
+
+var fileField = document.querySelector('#imagen');
+var profileImage = document.querySelector('.visor__image-foto');
+
+function getImage(e){
+  var myFile = e.currentTarget.files[0];
+  fr.addEventListener('load', writeImage);
+  fr.readAsDataURL(myFile);
+}
+
+function writeImage() {
+  profileImage.src= fr.result;
+}
+
+function fakeFileClick() {
+ fileField.click();
+}
+
+fileField.addEventListener('change', getImage);
+uploadBtn.addEventListener('click', fakeFileClick);

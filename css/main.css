@@ -311,6 +311,12 @@ body {
   border-radius: 3px;
   background-color: #e17334;
   color: white;
+  display: block;
+  padding: 5px;
+}
+
+.action__hiddenbutton {
+  display: none;
 }
 
 body {
@@ -372,7 +378,6 @@ body {
   width: 30px;
   height: 30px;
   border: solid 1px #a2deaf;
-  display: inline-block;
 }
 
 .form__rellena--step {
