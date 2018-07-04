@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: flex-end;
   width: 120px;
-  margin:auto;
+  margin:0 0 0 auto;
   }
 .div_colors {
   display: flex;
@@ -64,13 +64,15 @@
   text-transform: capitalize;
   display: flex;
   align-items: center;
+  padding-bottom: 10px;
 }
 .form__fonts{
   margin:auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-top: 0;
+  margin: 0 0 0 auto;
+
 }
 .montserrat {
   font-family: $font-title-index;
