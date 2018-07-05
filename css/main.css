@@ -375,6 +375,8 @@ body {
 }
 
 .form__rellena--reload {
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 30px;
   height: 30px;
   border: solid 1px #a2deaf;
