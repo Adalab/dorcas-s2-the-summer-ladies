@@ -53,6 +53,11 @@ body {
   width: 30px;
   height: 30px;
   border: solid 1px $colorline;
+
+}
+.form__box--image {
+  display: flex;
+  justify-content: space-between;
 }
 
 .form__rellena--step {
