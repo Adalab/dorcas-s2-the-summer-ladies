@@ -306,11 +306,16 @@ body {
 }
 
 .form__rellena--button {
-  width: 140px;
-  height: 30px;
+  padding: 5px;
   border-radius: 3px;
   background-color: #e17334;
   color: white;
+  display: block;
+  padding: 5px;
+}
+
+.action__hiddenbutton {
+  display: none;
 }
 
 body {
@@ -369,10 +374,20 @@ body {
 }
 
 .form__rellena--reload {
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 30px;
   height: 30px;
   border: solid 1px #a2deaf;
-  display: inline-block;
+}
+
+.form__box--image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .form__rellena--step {
@@ -531,7 +546,6 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#bfcdd0), to(#dde9ed));
   background-image: linear-gradient(#bfcdd0, #dde9ed);
   width: 100%;
-  border: 1px solid green;
 }
 
 .visor__name-subname {
@@ -553,7 +567,6 @@ body {
   align-content: center;
   width: 240px;
   margin: auto;
-  border: 1px solid blue;
 }
 
 .visor__view {

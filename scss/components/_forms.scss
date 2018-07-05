@@ -48,10 +48,16 @@ body {
 }
 
 .form__rellena--reload {
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 30px;
   height: 30px;
   border: solid 1px $colorline;
-  display: inline-block;
+
+}
+.form__box--image {
+  display: flex;
+  justify-content: space-between;
 }
 
 .form__rellena--step {
