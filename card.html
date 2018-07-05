@@ -25,8 +25,8 @@
       </button>
         <div class="visor__view">
           <div class="visor__name-subname">
-            <h4 class="visor__view-name">nombre apellido</h4>
-            <h5 class="visor__view-profession">Front-end developer</h5>
+            <h4 class="visor__view-name" id="userName">nombre apellido</h4>
+            <h5 class="visor__view-profession" id="job">Front-end developer</h5>
           </div>
           <div class="visor__image">
             <img class="visor__image-foto" src="http://via.placeholder.com/240x200" alt="image-tarjet">
@@ -35,22 +35,22 @@
             <div class="visor__view-a">
               <ul class="visor__view-a-list">
                 <li>
-                  <a class="link" href="#" target="_blank" title="mobile">
+                  <a id="mobile" class="link" href="#" target="_blank" title="mobile">
                     <i class="rrss fas fa-mobile-alt"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="link" href="#" target="_blank" title="Gmail general">
+                  <a id="gmail" class="link" href="#" target="_blank" title="gmail">
                     <i class="rrss far fa-envelope"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="link" href="#" target="_blank" title="linkedin general">
+                  <a id="linkedin"class="link" href="#" target="_blank" title="linkedin">
                     <i class="rrss fab fa-linkedin-in"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="link" href="#" target="_blank" title="general">
+                  <a id="github" class="link" href="#" target="_blank" title="github">
                     <i class="rrss fab fa-github-alt"></i>
                   </a>
                 </li>
@@ -60,13 +60,13 @@
           <div class="visor__view-list-txt">
             <ul class="visor__skills">
               <li class="visor__list-text-icon">
-                <span class="skill-1"></span>
+                <span class="skill-1" id="skill-1"></span>
               </li>
               <li class="visor__list-text-icon">
-                <span class="skill-2"></span>
+                <span class="skill-2" id="skill-2"></span>
               </li>
               <li class="visor__list-text-icon">
-                <span class="skill-3"></span>
+                <span class="skill-3" id="skill-3"></span>
               </li>
             </ul>
           </div>
@@ -145,11 +145,11 @@
           <fieldset>
             <div class="form__rellena--step">
               <label for="name">Nombre completo</label>
-              <input placeholder="Ej: Sally Hill" type="text" id="name" />
+              <input placeholder="Ej: Sally Hill" class="input__name" type="text" id="name" data-donde="userName" />
             </div>
             <div class="form__rellena--step">
               <label for="position">Puesto</label>
-              <input placeholder="Front end Unicorn" type="text" id="position" />
+              <input placeholder="Front end Unicorn" class="input__job" type="text" id="position" data-donde ="job" />
             </div>
             <div class="form__rellena--file">
               <label for="imagen">Imagen de Perfil</label>
