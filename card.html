@@ -25,7 +25,7 @@
       </button>
         <div class="visor__view">
           <div class="visor__name-subname">
-            <h4 class="visor__view-name" id="name">nombre apellido</h4>
+            <h4 class="visor__view-name" id="userName">nombre apellido</h4>
             <h5 class="visor__view-profession" id="job">Front-end developer</h5>
           </div>
           <div class="visor__image">
@@ -145,11 +145,11 @@
           <fieldset>
             <div class="form__rellena--step">
               <label for="name">Nombre completo</label>
-              <input placeholder="Ej: Sally Hill" type="text" id="name" data-donde="" />
+              <input placeholder="Ej: Sally Hill" class="input__name" type="text" id="name" data-donde="userName" />
             </div>
             <div class="form__rellena--step">
               <label for="position">Puesto</label>
-              <input placeholder="Front end Unicorn" type="text" id="position" />
+              <input placeholder="Front end Unicorn" class="input__job" type="text" id="position" data-donde ="job" />
             </div>
             <div class="form__rellena--file">
               <label for="imagen">Imagen de Perfil</label>

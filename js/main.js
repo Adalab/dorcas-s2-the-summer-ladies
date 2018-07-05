@@ -54,3 +54,18 @@ selectorComparte.addEventListener('click', desplegarComparte);
 botonCrearTarjeta.addEventListener('click', crearTarjeta);
 
 //Laura e Irene
+
+
+var nameField = document.querySelector('.input__name');
+var roleField = document.querySelector('.input__job');
+
+
+function writeData(event) {
+  var guiltyElement = event.currentTarget;
+  var targetID = guiltyElement.getAttribute('data-donde');
+  
+  document.querySelector('#' + targetID).innerHTML = guiltyElement.value;
+}
+
+nameField.addEventListener('keyup', writeData);
+roleField.addEventListener('keyup', writeData);

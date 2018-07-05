@@ -5,11 +5,9 @@
 	},
 	"js": {
 		"src": [
-			// "js/main.js"
-			"js/form.js"
-			"js/desing.js"
+			"js/main.js"
 		],
-		"dest": "js/main.js"
+		"dest": "js/"
 	},
 	"images": "images/**/*.{gif,jpg,png,svg}",
 	"html": [
