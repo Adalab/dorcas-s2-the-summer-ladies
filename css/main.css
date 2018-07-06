@@ -581,6 +581,7 @@ body {
   width: 240px;
   border: 1px solid black;
   background-color: #f5f5f5;
+  position: relative;
 }
 
 .visor__view-name {
@@ -619,6 +620,15 @@ body {
   justify-content: space-between;
   height: 52px;
   margin-left: 10px;
+}
+
+.visor__box {
+  width: 5px;
+  height: 42px;
+  background-color: #a2deaf;
+  position: absolute;
+  top: 23px;
+  left: 0px;
 }
 
 .visor__view-a-list {
