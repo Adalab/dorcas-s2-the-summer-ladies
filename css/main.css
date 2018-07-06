@@ -160,6 +160,13 @@ body {
   color: #54585a;
 }
 
+.rotate {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  margin-right: 0;
+  margin-left: auto;
+}
+
 .container {
   padding: 23px 40px;
 }
