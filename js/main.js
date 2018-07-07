@@ -106,6 +106,7 @@ function visorAuto () {
   visorJob.innerHTML='Empleo';
   profileImage.src='./images/flamingocards.jpg';
   formImage.style.backgroundImage='url("./images/flamingocards.jpg")';
+  // AÑADIR MODIFICACION DE URL DE RRSS (GMAIL, LINKEDIN, ETC)
 }
 visorAuto();
 
