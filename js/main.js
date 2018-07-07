@@ -14,12 +14,16 @@ var botonrotado3 = document.querySelector('.move3');
 //escritura automatica visor
 var nameField = document.querySelector('.input__name');
 var roleField = document.querySelector('.input__job');
+var visorName = document.querySelector('.visor__view-name');
+var visorJob = document.querySelector('.visor__view-profession');
 //foto editor
 var fr = new FileReader();
 var uploadBtn = document.querySelector('.form__rellena--button');
 var fileField = document.querySelector('#imagen');
 var profileImage = document.querySelector('.visor__image-foto');
 var formImage = document.querySelector('.form__rellena--reload ');
+//boton reset
+var resetButton = document.querySelector('.visor__button-reset');
 //desplegable
 function desplegarDisena() {
   if (formularioDisena.classList.contains('form__oculto')) {
@@ -90,3 +94,20 @@ function fakeFileClick() {
 }
 fileField.addEventListener('change', getImage);
 uploadBtn.addEventListener('click', fakeFileClick);
+
+// BOTON RESET 
+
+// cuando carga la pagina aparece el visor con datos automáticos
+// si se hace click en reset esos campos se vuelven nuevamente automáticos
+
+function visorAuto () {
+  // var visorFoto = document.querySelector('.visor__image-foto');
+  visorName.innerHTML='Nombre y apellidos';
+  visorJob.innerHTML='Empleo';
+  profileImage.src='./images/flamingocards.jpg';
+  formImage.style.backgroundImage='url("./images/flamingocards.jpg")';
+}
+visorAuto();
+
+
+resetButton.addEventListener('click', visorAuto);
