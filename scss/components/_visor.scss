@@ -14,7 +14,7 @@
   align-content: center;
   width: 240px;
   margin: auto;
-
+}
   .visor__view {
     display: flex;
     flex-direction: column;
@@ -114,7 +114,6 @@
       padding: 0;
     }
   }
-}
 .red {
   .visor__box {
     background-color: $lightRed;
@@ -149,5 +148,27 @@
   }
   .visor__list-text-icon {
     background-color: $mediumGrey;
+  }
+}
+.comic {
+  .visor__view-name {
+    font-family: $comic-sans;
+  }
+  .visor__view-profession {
+    font-family: $comic-sans;
+  }
+  .visor__list-text-icon {
+    font-family: $comic-sans;
+  }
+}
+.montserrat {
+  .visor__view-name {
+    font-family: $font-title-index;
+  }
+  .visor__view-profession {
+    font-family: $font-title-index;
+  }
+  .visor__list-text-icon {
+    font-family: $font-title-index;
   }
 }

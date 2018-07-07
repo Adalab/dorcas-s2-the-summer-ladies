@@ -20,6 +20,9 @@ var uploadBtn = document.querySelector('.form__rellena--button');
 var fileField = document.querySelector('#imagen');
 var profileImage = document.querySelector('.visor__image-foto');
 var formImage = document.querySelector('.form__rellena--reload ');
+//diseña cambio color
+var cardContainer = document.querySelector('.visor__container1');
+var radios = document.querySelectorAll('.point');
 //desplegable
 function desplegarDisena() {
   if (formularioDisena.classList.contains('form__oculto')) {
@@ -90,3 +93,33 @@ function fakeFileClick() {
 }
 fileField.addEventListener('change', getImage);
 uploadBtn.addEventListener('click', fakeFileClick);
+//diseña cambio color
+function init() {
+  for(var i = 0; i < radios.length; i++) {
+    radios[i].addEventListener('click', setStyles);
+  }
+}
+function setStyles(event) {
+  var newColor = event.currentTarget.getAttribute('data-color');
+  resetColor();
+  cardContainer.classList.add(newColor);
+}
+function resetColor() {
+  cardContainer.classList.remove('red', 'grey');
+}
+init();
+//diseña cambio de fuentes
+function initFont() {
+  for(var i = 0; i < radios.length; i++) {
+    radios[i].addEventListener('click', setStylesFont);
+  }
+}
+function setStylesFont(event) {
+  var newFont = event.currentTarget.getAttribute('data-font');
+  resetFont();
+  cardContainer.classList.add(newFont);
+}
+function resetFont() {
+  cardContainer.classList.remove('comic', 'montserrat');
+}
+initFont();
