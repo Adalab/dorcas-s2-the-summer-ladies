@@ -539,7 +539,7 @@ body {
 }
 
 .comic1 {
-  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", san-serif;
+  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", sans-serif;
 }
 
 .montserrat1 {
@@ -602,7 +602,7 @@ body {
   padding: 20px 20px 14px 0;
   color: #114e4e;
   text-transform: capitalize;
-  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", san-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .visor__image-foto {
@@ -615,7 +615,7 @@ body {
   line-height: 20px;
   margin-left: 20px;
   color: #54585a;
-  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", san-serif;
+  font-family: "Open Sans", sans-serif;
   padding-bottom: 10px;
 }
 
@@ -768,15 +768,15 @@ body {
 }
 
 .comic .visor__view-name {
-  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", san-serif;
+  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", sans-serif;
 }
 
 .comic .visor__view-profession {
-  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", san-serif;
+  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", sans-serif;
 }
 
 .comic .visor__list-text-icon {
-  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", san-serif;
+  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", sans-serif;
 }
 
 .montserrat .visor__view-name {

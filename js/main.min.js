@@ -23,6 +23,7 @@ var formImage = document.querySelector('.form__rellena--reload ');
 //diseña cambio color
 var cardContainer = document.querySelector('.visor__container1');
 var radios = document.querySelectorAll('.point');
+var radiosFont = document.querySelectorAll('.point1');
 //desplegable
 function desplegarDisena() {
   if (formularioDisena.classList.contains('form__oculto')) {
@@ -102,7 +103,9 @@ function init() {
 function setStyles(event) {
   var newColor = event.currentTarget.getAttribute('data-color');
   resetColor();
-  cardContainer.classList.add(newColor);
+  if (newColor !== '') {
+    cardContainer.classList.add(newColor);
+  }
 }
 function resetColor() {
   cardContainer.classList.remove('red', 'grey');
@@ -110,14 +113,16 @@ function resetColor() {
 init();
 //diseña cambio de fuentes
 function initFont() {
-  for(var i = 0; i < radios.length; i++) {
-    radios[i].addEventListener('click', setStylesFont);
+  for(var i = 0; i < radiosFont.length; i++) {
+    radiosFont[i].addEventListener('click', setStylesFont);
   }
 }
 function setStylesFont(event) {
   var newFont = event.currentTarget.getAttribute('data-font');
   resetFont();
-  cardContainer.classList.add(newFont);
+  if (newFont !== '') {
+    cardContainer.classList.add(newFont);
+  }
 }
 function resetFont() {
   cardContainer.classList.remove('comic', 'montserrat');
