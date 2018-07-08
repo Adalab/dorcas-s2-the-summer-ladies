@@ -101,12 +101,12 @@ uploadBtn.addEventListener('click', fakeFileClick);
 // si se hace click en reset esos campos se vuelven nuevamente automáticos
 
 function visorAuto () {
-  // var visorFoto = document.querySelector('.visor__image-foto');
   visorName.innerHTML='Nombre y apellidos';
   visorJob.innerHTML='Empleo';
-  profileImage.src='./images/flamingocards.jpg';
-  formImage.style.backgroundImage='url("./images/flamingocards.jpg")';
+  profileImage.src='./images/flamingocardsok.jpg';
+  formImage.style.backgroundImage='url("./images/flamingocardsok.jpg")';
   // AÑADIR MODIFICACION DE URL DE RRSS (GMAIL, LINKEDIN, ETC)
+  // AÑADIR DISEÑO AUTO
 }
 visorAuto();
 
