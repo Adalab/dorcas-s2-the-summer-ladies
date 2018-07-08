@@ -112,3 +112,15 @@ visorAuto();
 
 
 resetButton.addEventListener('click', visorAuto);
+
+
+//BOTON TWITTER
+
+var twitterShare = document.querySelector('.container__comparte--button-twitter');
+
+twitterShare.onclick = function(e) {
+  e.preventDefault();
+  var twitterWindow = window.open('https://twitter.com/share?url=' + document.URL, 'twitter-popup', 'height=350,width=600','590','253');
+  if(twitterWindow.focus) { twitterWindow.focus(); }
+    return false;
+  };
