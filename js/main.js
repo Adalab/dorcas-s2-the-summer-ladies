@@ -22,10 +22,17 @@ var uploadBtn = document.querySelector('.form__rellena--button');
 var fileField = document.querySelector('#imagen');
 var profileImage = document.querySelector('.visor__image-foto');
 var formImage = document.querySelector('.form__rellena--reload ');
+
 //boton reset
 var resetButton = document.querySelector('.visor__button-reset');
+<<<<<<< HEAD
 var visorContainer = document.querySelector('.visor__container1');
 var visorSkills = document.querySelector('.visor__skills');
+=======
+
+var formRellenaSkills = document.querySelector('.form__rellena--skills');
+
+>>>>>>> master
 //desplegable
 function desplegarDisena() {
   if (formularioDisena.classList.contains('form__oculto')) {
@@ -97,7 +104,8 @@ function fakeFileClick() {
 fileField.addEventListener('change', getImage);
 uploadBtn.addEventListener('click', fakeFileClick);
 
-// BOTON RESET 
+
+// BOTON RESET
 
 // cuando carga la pagina aparece el visor con datos predefinidos
 // si se hace click en reset esos campos vuelven a estar predefinidos
@@ -129,3 +137,70 @@ visorAuto();
 
 
 resetButton.addEventListener('click', visorAuto);
+
+//Habilidades
+
+var counterSkills = 0;
+
+function createSelect(entryskills){
+  var input_select= document.createElement('select');
+  input_select.name = "skills";
+  input_select.id = "skills";
+  input_select.classList.add("select_skills");
+
+  for( var i= 0; i <entryskills.length; i++){
+    var createOption = document.createElement('option');
+    createOption.value = entryskills[i];
+    input_select.appendChild(createOption);
+    createOption.innerHTML = entryskills[i];
+  }
+ formRellenaSkills.appendChild(input_select);
+}
+
+function serverConector(){
+  fetch('https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json')
+
+    .then(function(response){
+      return response.json();
+    })
+
+    .then(function(json){
+      var skills = json.skills;
+      if (counterSkills < 3) {
+        createSelect(skills);
+        createPlusButton();
+        counterSkills = counterSkills + 1;
+      }
+    });
+}
+
+function init(){
+  serverConector();
+}
+
+init();
+
+
+function createPlusButton(){
+  var plusButton = document.createElement('a');
+  var divButton = document.createElement('div');
+  var iButton = document.createElement('i');
+
+  divButton.classList.add('form__rellena--plus');
+  divButton.classList.add('color--orange');
+  divButton.classList.add('addSkill');
+  iButton.classList.add('fas');
+  iButton.classList.add('fa-plus');
+  iButton.classList.add('color--orange');
+
+  divButton.appendChild(iButton);
+  plusButton.appendChild(divButton);
+  formRellenaSkills.appendChild(plusButton);
+
+  plusButton.addEventListener('click', serverConector);
+}
+
+function minusButton(button) {
+  button.classList.toggle('fa-plus');
+  button.classList.toggle('fa-minus');
+}
