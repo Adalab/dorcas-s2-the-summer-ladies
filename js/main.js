@@ -25,6 +25,9 @@ var formImage = document.querySelector('.form__rellena--reload ');
 
 //boton reset
 var resetButton = document.querySelector('.visor__button-reset');
+var visorContainer = document.querySelector('.visor__container1');
+var visorSkills = document.querySelector('.visor__skills');
+
 var formRellenaSkills = document.querySelector('.form__rellena--skills');
 
 //diseña cambio color
@@ -106,49 +109,65 @@ fileField.addEventListener('change', getImage);
 uploadBtn.addEventListener('click', fakeFileClick);
 // BOTON RESET
 
-// cuando carga la pagina aparece el visor con datos automáticos
-// si se hace click en reset esos campos se vuelven nuevamente automáticos
+// cuando carga la pagina aparece el visor con datos predefinidos
+// si se hace click en reset esos campos vuelven a estar predefinidos
 
-function visorAuto () {
-  visorName.innerHTML='Nombre y apellidos';
-  visorJob.innerHTML='Empleo';
+function visorDesignAuto() {
+  visorContainer.classList.remove('red');
+  visorContainer.classList.remove('grey');
+  visorContainer.classList.add('blue');
+}
+function visorImageAuto() {
   profileImage.src='./images/flamingocardsok.jpg';
   formImage.style.backgroundImage='url("./images/flamingocardsok.jpg")';
-  // AÑADIR MODIFICACION DE URL DE RRSS (GMAIL, LINKEDIN, ETC)
-  // AÑADIR DISEÑO AUTO
 }
+function visorAuto () {
+  //CAMBIAR CAMPO NOMBRE Y APELLIDOS + EMPLEO EN VISOR
+  visorName.innerHTML='Nombre y apellidos';
+  visorJob.innerHTML='Empleo';
+
+  //CAMBIA A IMAGEN PREDEFINIDA Y DISEÑO PREDEFINIDO (BLUE)
+  visorImageAuto();
+  visorDesignAuto();
+
+  // OCULTAR BOTON SKILLS
+  visorSkills.classList.add('form_hidden');
+
+}
+
 visorAuto();
 
 
 resetButton.addEventListener('click', visorAuto);
 
+
 //Habilidades
 
 var counterSkills = 0;
 
-function createSelect(entryskills){
-  var input_select= document.createElement('select');
-  input_select.name = "skills";
-  input_select.id = "skills";
-  input_select.classList.add("select_skills");
+function createSelect(entryskills) {
+  var input_select = document.createElement('select');
+  input_select.name = 'skills';
+  input_select.id = 'skills';
+  input_select.classList.add('select_skills');
 
-  for( var i= 0; i <entryskills.length; i++){
+  for (var i = 0; i < entryskills.length; i++) {
     var createOption = document.createElement('option');
     createOption.value = entryskills[i];
     input_select.appendChild(createOption);
     createOption.innerHTML = entryskills[i];
   }
- formRellenaSkills.appendChild(input_select);
+  formRellenaSkills.appendChild(input_select);
 }
 
-function serverConector(){
+function serverConector() {
   fetch('https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json')
 
-    .then(function(response){
+    .then(function (response) {
       return response.json();
     })
 
-    .then(function(json){
+    .then(function (json) {
       var skills = json.skills;
       if (counterSkills < 3) {
         createSelect(skills);
@@ -158,14 +177,14 @@ function serverConector(){
     });
 }
 
-function init(){
+function init() {
   serverConector();
 }
 
 init();
 
 
-function createPlusButton(){
+function createPlusButton() {
   var plusButton = document.createElement('a');
   var divButton = document.createElement('div');
   var iButton = document.createElement('i');

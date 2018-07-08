@@ -743,6 +743,27 @@ body {
   padding: 0;
 }
 
+.blue .visor__box {
+  background-color: #a2deaf;
+}
+
+.blue .visor__view-name {
+  color: #114e4e;
+}
+
+.blue .rrss {
+  border-color: #a2deaf;
+  color: #114e4e;
+}
+
+.blue .visor__view-list-txt {
+  border-top: #438792;
+}
+
+.blue .visor__list-text-icon {
+  background-color: #438792;
+}
+
 .red .visor__box {
   background-color: #e95626;
 }
