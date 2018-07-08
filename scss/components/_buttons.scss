@@ -59,10 +59,9 @@
   display: flex;
   text-align: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin: 10px;
   width: 75px;
   height: 30px;
-  margin-top: 10px;
   border-radius: 15px;
   border: solid 1px $color-background;
   color: $color-titles;
@@ -71,6 +70,10 @@
   text-transform: uppercase;
   background: none;
   margin-left: 0;
+}
+
+.fa-trash-alt {
+  margin-right: 10px;
 }
 
 // ----ANDRE ----//
