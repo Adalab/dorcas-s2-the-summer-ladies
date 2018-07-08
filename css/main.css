@@ -556,7 +556,11 @@ body {
   margin: 0 0 0 auto;
 }
 
-.montserrat {
+.comic1 {
+  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", sans-serif;
+}
+
+.montserrat1 {
   font-family: "Merriweather", serif;
 }
 
@@ -594,7 +598,7 @@ body {
   margin: auto;
 }
 
-.visor__container1 .visor__view {
+.visor__view {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -609,31 +613,31 @@ body {
   position: relative;
 }
 
-.visor__container1 .visor__view-name {
+.visor__view-name {
   font-size: 18px;
   line-height: 20px;
   margin-left: 20px;
   padding: 20px 20px 14px 0;
   color: #114e4e;
   text-transform: capitalize;
-  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", san-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
-.visor__container1 .visor__image-foto {
+.visor__image-foto {
   width: 240px;
   height: 200px;
 }
 
-.visor__container1 .visor__view-profession {
+.visor__view-profession {
   font-size: 16px;
   line-height: 20px;
   margin-left: 20px;
   color: #54585a;
-  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", san-serif;
+  font-family: "Open Sans", sans-serif;
   padding-bottom: 10px;
 }
 
-.visor__container1 .visor__view-a {
+.visor__view-a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -647,7 +651,7 @@ body {
   margin-left: 10px;
 }
 
-.visor__container1 .visor__box {
+.visor__box {
   width: 5px;
   height: 42px;
   background-color: #a2deaf;
@@ -656,7 +660,7 @@ body {
   left: 0px;
 }
 
-.visor__container1 .visor__view-a-list {
+.visor__view-a-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -666,11 +670,11 @@ body {
   text-decoration: none;
 }
 
-.visor__container1 .link {
+.link {
   text-decoration: none;
 }
 
-.visor__container1 .rrss {
+.rrss {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -690,7 +694,7 @@ body {
   color: #114e4e;
 }
 
-.visor__container1 .visor__view-list-txt {
+.visor__view-list-txt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -701,7 +705,7 @@ body {
   border-top: 2px solid #438792;
 }
 
-.visor__container1 .visor__skills {
+.visor__skills {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -710,7 +714,7 @@ body {
   align-items: center;
 }
 
-.visor__container1 .visor__list-text-icon {
+.visor__list-text-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -734,7 +738,7 @@ body {
   color: #f5f5f5;
 }
 
-.visor__container1 .visor__list-text-icon span {
+.visor__list-text-icon span {
   margin: 0;
   padding: 0;
 }
@@ -781,6 +785,30 @@ body {
   background-color: #dfe5eb;
 }
 
+.comic .visor__view-name {
+  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", sans-serif;
+}
+
+.comic .visor__view-profession {
+  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", sans-serif;
+}
+
+.comic .visor__list-text-icon {
+  font-family: "Comic Sans MS", "Comic Sans", "TSCu_Comic", sans-serif;
+}
+
+.montserrat .visor__view-name {
+  font-family: "Merriweather", serif;
+}
+
+.montserrat .visor__view-profession {
+  font-family: "Merriweather", serif;
+}
+
+.montserrat .visor__list-text-icon {
+  font-family: "Merriweather", serif;
+}
+
 .form__oculto {
   display: none;
 }
@@ -824,7 +852,7 @@ body {
 
   .home {
     max-width: 420px;
-    margin: 348px auto 60px;
+    margin: 100px auto 60px;
   }
 
   .home__logo {
@@ -847,7 +875,7 @@ body {
   }
 
   .home__button {
-    margin-top: 185px;
+    margin-top: 75px;
   }
 }
 
