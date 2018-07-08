@@ -75,6 +75,7 @@ function writeData(event) {
   var guiltyElement = event.currentTarget;
   var targetID = guiltyElement.getAttribute('data-donde');
   document.querySelector('#' + targetID).innerHTML = guiltyElement.value;
+  saveForm();
 }
 nameField.addEventListener('keyup', writeData);
 roleField.addEventListener('keyup', writeData);
@@ -88,6 +89,7 @@ function getImage(e) {
 function writeImage() {
   profileImage.src = fr.result;
   formImage.style.backgroundImage = 'url(' + fr.result + ')';
+  saveForm();
 }
 function fakeFileClick() {
   fileField.click();
@@ -106,6 +108,7 @@ function setStyles(event) {
   if (newColor !== '') {
     cardContainer.classList.add(newColor);
   }
+  saveForm();
 }
 function resetColor() {
   cardContainer.classList.remove('red', 'grey');
@@ -123,6 +126,7 @@ function setStylesFont(event) {
   if (newFont !== '') {
     cardContainer.classList.add(newFont);
   }
+  saveForm();
 }
 function resetFont() {
   cardContainer.classList.remove('comic', 'montserrat');
@@ -130,10 +134,22 @@ function resetFont() {
 initFont();
 
 //localStorage
-// var myFormulary = [
-//   yourColor: radios.value;
-//   yourFont: radiosFont.value;
-//   fullName: nameField.value;
-//   yourJob: roleField.value;
-//   yourImage: fileField.img;
-// ]
+function saveForm () {
+  var myFormulary = {
+    color: radios.value,
+    font: getRadiosFontSelected(),
+    fullName: nameField.value,
+    job: roleField.value,
+    image: fileField.img
+  };
+  localStorage.setItem('myFormulary', JSON.stringify(myFormulary));
+}
+
+function getRadiosFontSelected () {
+  for (var i = 0; i < radiosFont.length; i++) {
+    if (radiosFont[i].checked) {
+      return radiosFont[i].getAttribute('data-font');
+    }
+  }
+  return false;
+}
