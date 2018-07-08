@@ -24,6 +24,8 @@ var profileImage = document.querySelector('.visor__image-foto');
 var formImage = document.querySelector('.form__rellena--reload ');
 //boton reset
 var resetButton = document.querySelector('.visor__button-reset');
+var visorContainer = document.querySelector('.visor__container1');
+var visorSkills = document.querySelector('.visor__skills');
 //desplegable
 function desplegarDisena() {
   if (formularioDisena.classList.contains('form__oculto')) {
@@ -97,17 +99,32 @@ uploadBtn.addEventListener('click', fakeFileClick);
 
 // BOTON RESET 
 
-// cuando carga la pagina aparece el visor con datos automáticos
-// si se hace click en reset esos campos se vuelven nuevamente automáticos
+// cuando carga la pagina aparece el visor con datos predefinidos
+// si se hace click en reset esos campos vuelven a estar predefinidos
 
-function visorAuto () {
-  visorName.innerHTML='Nombre y apellidos';
-  visorJob.innerHTML='Empleo';
+function visorDesignAuto() {
+  visorContainer.classList.remove('red');
+  visorContainer.classList.remove('grey');
+  visorContainer.classList.add('blue');
+}
+function visorImageAuto() {
   profileImage.src='./images/flamingocardsok.jpg';
   formImage.style.backgroundImage='url("./images/flamingocardsok.jpg")';
-  // AÑADIR MODIFICACION DE URL DE RRSS (GMAIL, LINKEDIN, ETC)
-  // AÑADIR DISEÑO AUTO
 }
+function visorAuto () {
+  //CAMBIAR CAMPO NOMBRE Y APELLIDOS + EMPLEO EN VISOR
+  visorName.innerHTML='Nombre y apellidos';
+  visorJob.innerHTML='Empleo';
+
+  //CAMBIA A IMAGEN PREDEFINIDA Y DISEÑO PREDEFINIDO (BLUE)
+  visorImageAuto();
+  visorDesignAuto();
+
+  // OCULTAR BOTON SKILLS
+
+
+}
+
 visorAuto();
 
 

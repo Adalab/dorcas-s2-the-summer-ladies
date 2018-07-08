@@ -115,6 +115,25 @@
     }
   }
 }
+.blue {
+  .visor__box {
+    background-color: $lightBlue;
+  }
+  .visor__view-name {
+    color: $darkBlue;
+  }
+  .rrss {
+    border-color: $lightBlue;
+    color: $darkBlue;
+  }
+  .visor__view-list-txt {
+    border-top: $mediumBlue;
+  }
+  .visor__list-text-icon {
+    background-color: $mediumBlue;
+  }
+
+}
 .red {
   .visor__box {
     background-color: $lightRed;
