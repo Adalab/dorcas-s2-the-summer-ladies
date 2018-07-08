@@ -1,5 +1,12 @@
 // ----VERO ----//
 
+.rotate {
+  transform: rotate(-180deg);
+  margin-right: 0;
+  margin-left: auto;
+}
+
+
 .container {
   padding: 23px 40px;
 }

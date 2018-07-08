@@ -9,19 +9,19 @@ body {
 .form__rellena {
   padding-bottom: 21px;
   border-bottom: solid 1px $color-line-bottom;
-  fieldset{
-  border: 0px;
-  margin-top: 40px;
+  fieldset {
+    border: 0px;
+    margin-top: 40px;
   }
   label {
     color: $indexfont-color; /* esta variable no deberia llamarse asi porque no es solo para el index*/
     font-size: 14px;
   }
   input {
-  width: 100%;
-  margin: 0px auto;
-  border: solid 1px $colorline;
-  height: 30px;
+    width: 100%;
+    margin: 0px auto;
+    border: solid 1px $colorline;
+    height: 30px;
   }
 }
 
@@ -48,28 +48,33 @@ body {
 }
 
 .form__rellena--reload {
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 30px;
   height: 30px;
   border: solid 1px $colorline;
-  display: inline-block;
+
+}
+.form__box--image {
+  display: flex;
+  justify-content: space-between;
 }
 
 .form__rellena--step {
   height: 55px;
   margin-top: 5px;
   margin-bottom: 5px;
-
 }
 
 .form__rellena--file {
   input {
-  border: 0px;
-  width: 85%;
+    border: 0px;
+    width: 85%;
   }
 }
 
 // formulario Aylen
-.colors__palets{
+.colors__palets {
   width: 30px;
   height: 30px;
   display: inline-block;
