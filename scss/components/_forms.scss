@@ -79,3 +79,21 @@ body {
   height: 30px;
   display: inline-block;
 }
+
+.form__rellena--skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  label {
+    grid-column-end: 3;
+    grid-column-start: 1;
+
+  }
+}
+.select_skills {
+  border: solid 1px $colorline;
+  margin-top: 6px;
+  width: 165px;
+  height: 30px;
+  display: block;
+}
