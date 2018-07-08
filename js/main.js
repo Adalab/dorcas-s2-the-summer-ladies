@@ -96,6 +96,7 @@ function fakeFileClick() {
 }
 fileField.addEventListener('change', getImage);
 uploadBtn.addEventListener('click', fakeFileClick);
+
 //diseña cambio color
 function init() {
   for(var i = 0; i < radios.length; i++) {
@@ -103,6 +104,7 @@ function init() {
   }
 }
 function setStyles(event) {
+  //del elemento donde he hecho el click que me de su atributo data-color
   var newColor = event.currentTarget.getAttribute('data-color');
   resetColor();
   if (newColor !== '') {
