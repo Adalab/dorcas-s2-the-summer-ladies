@@ -128,3 +128,12 @@ function resetFont() {
   cardContainer.classList.remove('comic', 'montserrat');
 }
 initFont();
+
+//localStorage
+// var myFormulary = [
+//   yourColor: radios.value;
+//   yourFont: radiosFont.value;
+//   fullName: nameField.value;
+//   yourJob: roleField.value;
+//   yourImage: fileField.img;
+// ]
