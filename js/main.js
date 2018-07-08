@@ -51,16 +51,35 @@ function desplegarComparte() {
 }
 
 function crearTarjeta() {
-  if (tarjetaCreada.classList.contains("form__oculto")) {
-    tarjetaCreada.classList.remove("form__oculto");
+  if (tarjetaCreada.classList.contains('form__oculto')) {
+    tarjetaCreada.classList.remove('form__oculto');
   } else {
-    tarjetaCreada.classList.add("form__oculto");
+    tarjetaCreada.classList.add('form__oculto');
   }
 }
-selectorDisena.addEventListener("click", desplegarDisena);
-selectorRellena.addEventListener("click", desplegarRellena);
-selectorComparte.addEventListener("click", desplegarComparte);
-botonCrearTarjeta.addEventListener("click", crearTarjeta);
+selectorDisena.addEventListener('click', desplegarDisena);
+selectorRellena.addEventListener('click', desplegarRellena);
+selectorComparte.addEventListener('click', desplegarComparte);
+botonCrearTarjeta.addEventListener('click', crearTarjeta);
+
+//Laura e Irene
+
+
+var nameField = document.querySelector('.input__name');
+var roleField = document.querySelector('.input__job');
+
+
+function writeData(event) {
+  var guiltyElement = event.currentTarget;
+  var targetID = guiltyElement.getAttribute('data-donde');
+  
+  document.querySelector('#' + targetID).innerHTML = guiltyElement.value;
+}
+
+nameField.addEventListener('keyup', writeData);
+roleField.addEventListener('keyup', writeData);
+
+
 
 ///foto editor//
 

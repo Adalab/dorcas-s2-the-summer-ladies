@@ -180,6 +180,7 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   padding-top: 10px;
+  border-bottom: solid 1px #d8d8d8;
 }
 
 .container__comparte--icon {
@@ -333,9 +334,12 @@ body {
   border-bottom: solid 1px #d8d8d8;
 }
 
+.container__form--rellena {
+  border-bottom: solid 1px #d8d8d8;
+}
+
 .form__rellena {
   padding-bottom: 21px;
-  border-bottom: solid 1px #d8d8d8;
 }
 
 .form__rellena fieldset {
