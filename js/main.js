@@ -110,8 +110,7 @@ uploadBtn.addEventListener('click', fakeFileClick);
 // BOTON RESET
 
 // cuando carga la pagina aparece el visor con datos predefinidos
-// si se hace click en reset esos campos vuelven a estar predefinidos
-
+// si se hace click en reset esos campos vuelven a estar predefinido
 function visorDesignAuto() {
   visorContainer.classList.remove('red');
   visorContainer.classList.remove('grey');
