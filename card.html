@@ -39,22 +39,22 @@
             <div class="visor__view-a">
               <ul class="visor__view-a-list">
                 <li>
-                  <a class="link" href="tel:5554545" target="_blank" title="mobile">
+                  <a class="link" href="" target="_blank" title="mobile" id="rellena__phone">
                     <i class="rrss fas fa-mobile-alt"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="" class="linkEmail" target="_blank" title="Gmail general">
+                  <a href="" class="link" target="_blank" title="Gmail general" id="rellena__mail">
                     <i class="rrss far fa-envelope"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="link" href="https://es.linkedin.com/" target="_blank" title="linkedin general">
+                  <a class="link" href="" target="_blank" title="linkedin general" id="rellena__linkedin">
                     <i class="rrss fab fa-linkedin-in"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="link" href="https://github.com/" target="_blank" title="general">
+                  <a class="link" href="" target="_blank" title="general" id="rellena__github">
                     <i class="rrss fab fa-github-alt"></i>
                   </a>
                 </li>
@@ -167,32 +167,33 @@
               </div>
               <div class="form__rellena--step">
                 <label for="email">Email</label>
-                <input class="rellena_mail" placeholder="sallyhill@gmail.com" type="text" id="email" />
+                <input class="rellena__mail" placeholder="sallyhill@gmail.com" type="text" darta-rrss="rellena__email" />
               </div>
               <div class="form__rellena--step">
                 <label for="phone">Telefono</label>
-                <input placeholder="555-55-55-55" type="text" id="phone" />
+                <input class="rellena__phone" placeholder="555-55-55-55" type="text" data-rrss="rellena__phone" />
               </div>
-              <div class="form__rellena--step">
-                <label for="linkedin">Linkedin</label>
-                <input placeholder="ej:linkedin.com/in/sally-hill" type="linkedin" id="linkedin" />
+              <div class=" form__rellena--step ">
+                <label for="linkedin ">Linkedin</label>
+                <input class="rellena__linkedin " placeholder="ej:linkedin.com/in/sally-hill " type="linkedin " data-rrss="rellena__linkedin "
+                />
               </div>
-              <div class="form__rellena--step">
-                <label for="github">Github</label>
-                <input placeholder="@sally-hill" type="text" id="linkedin" />
+              <div class="form__rellena--step ">
+                <label for="github ">Github</label>
+                <input class="rellena__github " placeholder="@sally-hill " type="text " data-rrss="rellena__github" />
               </div>
             </fieldset>
             <fieldset>
-              <div class="form__rellena--skills">
-                <label for="skills">Habilidades (máximo 3)</label>
-                <select id="skills" name="skills">
+              <div class="form__rellena--skills ">
+                <label for="skills ">Habilidades (máximo 3)</label>
+                <select id="skills " name="skills ">
                   <option>CSS</option>
                   <option>HTML</option>
                   <option>JS</option>
                 </select>
-                <a href="#" id="reloadimage">
-                  <div class="form__rellena--plus color--orange">
-                    <i class="fas fa-plus color--orange"></i>
+                <a href="# " id="reloadimage ">
+                  <div class="form__rellena--plus color--orange ">
+                    <i class="fas fa-plus color--orange "></i>
                   </div>
                 </a>
               </div>
@@ -201,25 +202,25 @@
         </div>
         </div>
         <!-- vero -->
-        <div class="container__comparte" id="comparte">
-          <div class="container__comparte--icon wraptitle">
-            <i class="fas fa-share-alt"></i>
-            <h2 class="generaltitle">Comparte</h2>
-            <i class="fas fa-angle-down color--grey move3"></i>
+        <div class="container__comparte " id="comparte ">
+          <div class="container__comparte--icon wraptitle ">
+            <i class="fas fa-share-alt "></i>
+            <h2 class="generaltitle ">Comparte</h2>
+            <i class="fas fa-angle-down color--grey move3 "></i>
           </div>
-          <div class="form__comparte wrapform form__oculto">
-            <div class="container__comparte--button">
+          <div class="form__comparte wrapform form__oculto ">
+            <div class="container__comparte--button ">
               <div>
-                <button type="button" name="button" class="container__comparte--buttonstyle">
-                  <i class="far fa-address-card"></i> Crear tarjeta
+                <button type="button " name="button " class="container__comparte--buttonstyle ">
+                  <i class="far fa-address-card "></i> Crear tarjeta
                 </button>
               </div>
             </div>
-            <div class="container--comparte-created form__oculto">
+            <div class="container--comparte-created form__oculto ">
               <p>La tarjeta ha sido creada:</p>
-              <a class="container--comparte-link" href="https://url.com">https://awesome-profile-card.com?id=A456DF0001</a>
-              <button type="button" name="button" class="container__comparte--button-twitter">
-                <i class="fab fa-twitter"></i> Compartir en Twitter
+              <a class="container--comparte-link " href="https://url.com ">https://awesome-profile-card.com?id=A456DF0001</a>
+              <button type="button " name="button " class="container__comparte--button-twitter ">
+                <i class="fab fa-twitter "></i> Compartir en Twitter
               </button>
             </div>
           </div>
@@ -228,11 +229,11 @@
   </main>
   <footer>
     <p>Awesome profile-cards @2018</p>
-    <a href="http://www.adalab.es/">
-      <img class="footer__logo" src=images/logo-adalab-80px.png>
+    <a href="http://www.adalab.es/ ">
+      <img class="footer__logo " src=images/logo-adalab-80px.png>
     </a>
   </footer>
-  <script src="js/main.min.js"></script>
+  <script src="js/main.min.js "></script>
 </body>
 
 </html>

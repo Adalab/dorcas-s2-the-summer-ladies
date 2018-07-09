@@ -91,25 +91,24 @@ fileField.addEventListener("change", getImage);
 uploadBtn.addEventListener("click", fakeFileClick);
 
 //iconos Aylen//
-var iconMail = document.querySelector(".fa-envelope.href");
-var searchMail = document.querySelector(".rellena_mail");
-var linkEmail = document.querySelector(".linkEmail")
+var searchPhone = document.querySelector(".rellena__phone");
+var searchLinkedin = document.querySelector(".rellena__linkedin");
+var searchMail = document.querySelector(".rellena__mail");
+var searchGithub = document.querySelector(".rellena__github");
 
+searchPhone.addEventListener("keyup", linkSocials);
+searchLinkedin.addEventListener("keyup", linkSocials);
+searchMail.addEventListener("keyup", linkSocials);
+searchGithub.addEventListener("keyup", linkSocials);
 
-function callMail() {
-  var userMail = event.target.value;
-  callMail.innerHTML;
- 
+function linkSocials(event) {
+  var guiltyForm = event.currentTarget;
+  var rrssId = guiltyForm.getAttribute("data-rrss");
+  if (guiltyForm.classList.contains("rellena__phone")) {
+    document.querySelector("#" + rrssId).href = "tel:" + guiltyForm.value;
+  } else if (guiltyForm.classList.contains("rellena__mail")) {
+    document.querySelector("#" + rrssId).href = "mailto:" + guiltyForm.value;
+  } else {
+    document.querySelector("#" + rrssId).href = "https://" + guiltyForm.value;
+  }
 }
-iconMail.addEventListener("keyup", callMail);
-
-En los _addEventListener_ de los _input_ yo he usado ‘keyup’ .
-Y luego ejecuta una función que genera un variable con el value una variable con el value de ese input. Por ejemplo:
- `var email = event.target.value;` 
-Luego es solo llevar esta variable para el href del icono.
-Por ejemplo:
- `emailLink.href = 'mailto:' + email;`
-
-Donde emailLink, en mi caso, seria el _querySelector_ del <a> del icono del e-mail.
-
-`<a href="" class="emailLink"><i class="iconsocial far fa-envelope"></i></a>`.
