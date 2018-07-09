@@ -36,21 +36,13 @@ var formRellenaSkills = document.querySelector('.form__rellena--skills');
 var cardContainer = document.querySelector('.visor__container1');
 var radios = document.querySelectorAll('.point');
 var radiosFont = document.querySelectorAll('.point1');
-
-//desplegable
-var selectorDisena = document.querySelector('.title__disena');
-var formularioDisena = document.querySelector('.form__disena--fontsColors');
-var selectorRellena = document.querySelector('.titulo__rellena');
-var formularioRellena = document.querySelector('.form__rellena');
-var selectorComparte = document.querySelector('.container__comparte--icon');
-var formularioComparte = document.querySelector('.form__comparte');
-var tarjetaCreada = document.querySelector('.container--comparte-created');
-var botonCrearTarjeta = document.querySelector(
-  '.container__comparte--buttonstyle'
-);
-var botonrotado1 = document.querySelector('.move1');
-var botonrotado2 = document.querySelector('.move2');
-var botonrotado3 = document.querySelector('.move3');
+//Habilidades
+var counterSkills = 0;
+//iconos
+var searchPhone = document.querySelector('.rellena__phone');
+var searchLinkedin = document.querySelector('.rellena__linkedin');
+var searchMail = document.querySelector('.rellena__email');
+var searchGithub = document.querySelector('.rellena__github');
 //localStorage
 var userForm = {
   'palette': 1,
@@ -175,15 +167,11 @@ visorAuto();
 resetButton.addEventListener('click', visorAuto);
 
 //Habilidades
-
-var counterSkills = 0;
-
 function createSelect(entryskills) {
   var input_select = document.createElement('select');
   input_select.name = 'skills';
   input_select.id = 'skills';
   input_select.classList.add('select_skills');
-
   for (var i = 0; i < entryskills.length; i++) {
     var createOption = document.createElement('option');
     createOption.value = entryskills[i];
@@ -192,7 +180,6 @@ function createSelect(entryskills) {
   }
   formRellenaSkills.appendChild(input_select);
 }
-
 function serverConector() {
   fetch(
     'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json'
@@ -200,7 +187,6 @@ function serverConector() {
   .then(function(response) {
     return response.json();
   })
-
   .then(function(json) {
     var skills = json.skills;
     if (counterSkills < 3) {
@@ -210,32 +196,25 @@ function serverConector() {
     }
   });
 }
-
 function initSkills() {
   serverConector();
 }
-
 initSkills();
-
 function createPlusButton() {
   var plusButton = document.createElement('a');
   var divButton = document.createElement('div');
   var iButton = document.createElement('i');
-
   divButton.classList.add('form__rellena--plus');
   divButton.classList.add('color--orange');
   divButton.classList.add('addSkill');
   iButton.classList.add('fas');
   iButton.classList.add('fa-plus');
   iButton.classList.add('color--orange');
-
   divButton.appendChild(iButton);
   plusButton.appendChild(divButton);
   formRellenaSkills.appendChild(plusButton);
-
   plusButton.addEventListener('click', serverConector);
 }
-
 function minusButton(button) {
   button.classList.toggle('fa-plus');
   button.classList.toggle('fa-minus');
@@ -282,12 +261,7 @@ function resetFont() {
   cardContainer.classList.remove('comic', 'montserrat');
 }
 initFont();
-//iconos Aylen
-var searchPhone = document.querySelector('.rellena__phone');
-var searchLinkedin = document.querySelector('.rellena__linkedin');
-var searchMail = document.querySelector('.rellena__email');
-var searchGithub = document.querySelector('.rellena__github');
-
+//iconos
 searchPhone.addEventListener('keyup', linkSocials);
 searchLinkedin.addEventListener('keyup', linkSocials);
 searchMail.addEventListener('keyup', linkSocials);
