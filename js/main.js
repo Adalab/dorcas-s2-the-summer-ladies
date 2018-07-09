@@ -64,6 +64,7 @@ var userForm = {
   'photo': 'data:image/png;base64,2342ba...',
   'skills': ['HTML', 'Sass', 'JavaScript']
 };
+//desplegable
 function desplegarDisena() {
   if (formularioDisena.classList.contains('form__oculto')) {
     formularioDisena.classList.remove('form__oculto');
@@ -113,8 +114,15 @@ botonCrearTarjeta.addEventListener('click', crearTarjeta);
 function writeData(event) {
   var guiltyElement = event.currentTarget;
   var targetID = guiltyElement.getAttribute('data-donde');
+  var formProperty = guiltyElement.getAttribute('data-property');
   document.querySelector('#' + targetID).innerHTML = guiltyElement.value;
+  userForm[formProperty] = guiltyElement.value;
   saveForm();
+  // if (targetID === 'userName') {
+  //   userForm.name = guiltyElement.value;
+  // } else if (targetID === 'job') {
+  //   userForm.job = guiltyElement.value;
+  // }
 }
 nameField.addEventListener('keyup', writeData);
 roleField.addEventListener('keyup', writeData);
@@ -128,6 +136,8 @@ function getImage(e) {
 function writeImage() {
   profileImage.src = fr.result;
   formImage.style.backgroundImage = 'url(' + fr.result + ')';
+  //Guarda la imagen (todo el troncho data:image/JPG;base64,jkdsfhgdgd...) en nuestro objeto del formulario
+  userForm.photo = fr.result;
   saveForm();
 }
 function fakeFileClick() {
@@ -187,18 +197,18 @@ function serverConector() {
   fetch(
     'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json'
   )
-    .then(function(response) {
-      return response.json();
-    })
+  .then(function(response) {
+    return response.json();
+  })
 
-    .then(function(json) {
-      var skills = json.skills;
-      if (counterSkills < 3) {
-        createSelect(skills);
-        createPlusButton();
-        counterSkills = counterSkills + 1;
-      }
-    });
+  .then(function(json) {
+    var skills = json.skills;
+    if (counterSkills < 3) {
+      createSelect(skills);
+      createPlusButton();
+      counterSkills = counterSkills + 1;
+    }
+  });
 }
 
 function initSkills() {
@@ -240,10 +250,12 @@ function init() {
 function setStyles(event) {
   //del elemento donde he hecho el click que me de su atributo data-color
   var newColor = event.currentTarget.getAttribute('data-color');
+  var value = event.currentTarget.value;
   resetColor();
   if (newColor !== '') {
     cardContainer.classList.add(newColor);
   }
+  userForm.palette = value;
   saveForm();
 }
 function resetColor() {
@@ -258,27 +270,19 @@ function initFont() {
 }
 function setStylesFont(event) {
   var newFont = event.currentTarget.getAttribute('data-font');
+  var value = event.currentTarget.value;
   resetFont();
   if (newFont !== '') {
     cardContainer.classList.add(newFont);
   }
+  userForm.typography = value;
   saveForm();
 }
 function resetFont() {
   cardContainer.classList.remove('comic', 'montserrat');
 }
 initFont();
-
-function getRadiosFontSelected() {
-  for (var i = 0; i < radiosFont.length; i++) {
-    if (radiosFont[i].checked) {
-      return radiosFont[i].getAttribute('data-font');
-    }
-  }
-  return false;
-}
 //iconos Aylen
-
 var searchPhone = document.querySelector('.rellena__phone');
 var searchLinkedin = document.querySelector('.rellena__linkedin');
 var searchMail = document.querySelector('.rellena__email');
@@ -290,7 +294,6 @@ searchMail.addEventListener('keyup', linkSocials);
 searchGithub.addEventListener('keyup', linkSocials);
 
 function linkSocials(event) {
-  console.log(event.currentTarget.classList)
   var guiltyForm = event.currentTarget;
   var rrssId = guiltyForm.getAttribute('data-rrss');
   if (guiltyForm.classList.contains('rellena__phone')) {
@@ -300,9 +303,11 @@ function linkSocials(event) {
   } else {
     document.querySelector('#' + rrssId).href = 'https://' + guiltyForm.value;
   }
+  var formProperty = guiltyForm.getAttribute('data-property');
+  userForm[formProperty] = guiltyForm.value;
+  saveForm();
 }
 //localStorage
 function saveForm() {
-
-  localStorage.setItem('myFormulary', JSON.stringify(myFormulary));
+  localStorage.setItem('userForm', JSON.stringify(userForm));
 }
