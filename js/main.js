@@ -177,11 +177,11 @@ function serverConector() {
     });
 }
 
-function init() {
+function initSkills() {
   serverConector();
 }
 
-init();
+initSkills();
 
 
 function createPlusButton() {
