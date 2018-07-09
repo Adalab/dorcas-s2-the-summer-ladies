@@ -36,6 +36,20 @@ var radios = document.querySelectorAll('.point');
 var radiosFont = document.querySelectorAll('.point1');
 
 //desplegable
+var selectorDisena = document.querySelector(".title__disena");
+var formularioDisena = document.querySelector(".form__disena--fontsColors");
+var selectorRellena = document.querySelector(".titulo__rellena");
+var formularioRellena = document.querySelector(".form__rellena");
+var selectorComparte = document.querySelector(".container__comparte--icon");
+var formularioComparte = document.querySelector(".form__comparte");
+var tarjetaCreada = document.querySelector(".container--comparte-created");
+var botonCrearTarjeta = document.querySelector(
+  ".container__comparte--buttonstyle"
+);
+var botonrotado1 = document.querySelector(".move1");
+var botonrotado2 = document.querySelector(".move2");
+var botonrotado3 = document.querySelector(".move3");
+
 function desplegarDisena() {
   if (formularioDisena.classList.contains('form__oculto')) {
     formularioDisena.classList.remove('form__oculto');
@@ -264,4 +278,25 @@ function getRadiosFontSelected () {
     }
   }
   return false;
+//iconos Aylen//
+var searchPhone = document.querySelector(".rellena__phone");
+var searchLinkedin = document.querySelector(".rellena__linkedin");
+var searchMail = document.querySelector(".rellena__mail");
+var searchGithub = document.querySelector(".rellena__github");
+
+searchPhone.addEventListener("keyup", linkSocials);
+searchLinkedin.addEventListener("keyup", linkSocials);
+searchMail.addEventListener("keyup", linkSocials);
+searchGithub.addEventListener("keyup", linkSocials);
+
+function linkSocials(event) {
+  var guiltyForm = event.currentTarget;
+  var rrssId = guiltyForm.getAttribute("data-rrss");
+  if (guiltyForm.classList.contains("rellena__phone")) {
+    document.querySelector("#" + rrssId).href = "tel:" + guiltyForm.value;
+  } else if (guiltyForm.classList.contains("rellena__mail")) {
+    document.querySelector("#" + rrssId).href = "mailto:" + guiltyForm.value;
+  } else {
+    document.querySelector("#" + rrssId).href = "https://" + guiltyForm.value;
+  }
 }
