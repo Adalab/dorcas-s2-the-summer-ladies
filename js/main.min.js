@@ -270,7 +270,7 @@ function getRadiosFontSelected() {
 
 var searchPhone = document.querySelector(".rellena__phone");
 var searchLinkedin = document.querySelector(".rellena__linkedin");
-var searchMail = document.querySelector(".rellena__mail");
+var searchMail = document.querySelector('.rellena__email');
 var searchGithub = document.querySelector(".rellena__github");
 
 searchPhone.addEventListener("keyup", linkSocials);
@@ -279,11 +279,12 @@ searchMail.addEventListener("keyup", linkSocials);
 searchGithub.addEventListener("keyup", linkSocials);
 
 function linkSocials(event) {
+  console.log(event.currentTarget.classList)
   var guiltyForm = event.currentTarget;
   var rrssId = guiltyForm.getAttribute("data-rrss");
   if (guiltyForm.classList.contains("rellena__phone")) {
     document.querySelector("#" + rrssId).href = "tel:" + guiltyForm.value;
-  } else if (guiltyForm.classList.contains("rellena__mail")) {
+  } else if (guiltyForm.classList.contains("rellena__email")) {
     document.querySelector("#" + rrssId).href = "mailto:" + guiltyForm.value;
   } else {
     document.querySelector("#" + rrssId).href = "https://" + guiltyForm.value;
