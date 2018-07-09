@@ -115,7 +115,6 @@ uploadBtn.addEventListener('click', fakeFileClick);
 function visorDesignAuto() {
   visorContainer.classList.remove('red');
   visorContainer.classList.remove('grey');
-  visorContainer.classList.add('blue');
 }
 function visorImageAuto() {
   profileImage.src='./images/flamingocardsok.jpg';
