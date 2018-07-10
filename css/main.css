@@ -118,7 +118,7 @@ body {
 }
 
 .home__logo {
-  background-image: url("/images/descarga.svg");
+  background-image: url("../images/descarga.svg");
   background-size: cover;
   height: 70px;
 }
