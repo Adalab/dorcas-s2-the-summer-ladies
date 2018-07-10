@@ -171,7 +171,7 @@ resetButton.addEventListener('click', visorAuto);
 function createSelect(entryskills) {
   var inputSelect = document.createElement('select');
   inputSelect.name = 'skills';
-  inputSelect.id = 'skills';
+  inputSelect.id = 'skills' + counterSkills;
   inputSelect.classList.add('select_skills');
   for (var i = 0; i < entryskills.length; i++) {
     var createOption = document.createElement('option');
@@ -179,8 +179,23 @@ function createSelect(entryskills) {
     inputSelect.appendChild(createOption);
     createOption.innerHTML = entryskills[i];
   }
+  inputSelect.addEventListener("change", skillAgregator);
   formRellenaSkills.appendChild(inputSelect);
 }
+
+function skillAgregator(e){
+  var activeSelect = e.currentTarget; //esto define cual select fue cambiado
+  var activeSkills = document.querySelector('#selected' +  activeSelect.id); //componemos el id del elemento que se quiere cambiar concatenando la palabra selected con el id del select que he cambiado 
+  activeSkills.innerHTML= activeSelect.value;
+  console.log(activeSelect.value)
+  console.log(activeSelect.id)
+
+}
+
+
+
+
+
 function serverConector() {
   fetch(
     'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json'
@@ -193,7 +208,9 @@ function serverConector() {
       if (counterSkills < 3) {
         createSelect(skills);
         createPlusButton();
+
         counterSkills = counterSkills + 1;
+
       }
     });
 }
@@ -216,25 +233,8 @@ function createPlusButton() {
   formRellenaSkills.appendChild(plusButton);
   plusButton.addEventListener('click', serverConector);
 }
-//Insertar habilidades visor
-// function initHab() {
-//   for (var i = 0; i < spanHab.length; i++) {
-//     spanHab[i].addEventListener('click', setStylesFont);
-//   }
-// }
-// function setStylesFont(event) {
-//   var newFont = event.currentTarget.getAttribute('data-font');
-//   var value = event.currentTarget.value;
-//   resetFont();
-//   if (newFont !== '') {
-//     cardContainer.classList.add(newFont);
-//   }
-// initHab();
 
-// function minusButton(button) {
-//   button.classList.toggle('fa-plus');
-//   button.classList.toggle('fa-minus');
-// }
+
 
 //diseña cambio color
 function init() {
