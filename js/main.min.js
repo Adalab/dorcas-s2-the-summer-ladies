@@ -98,7 +98,7 @@ function crearTarjeta() {
   } else {
     tarjetaCreada.classList.add('form__oculto');
   }
-  sendRequest();
+  sendRequest(userForm);
 }
 selectorDisena.addEventListener('click', desplegarDisena);
 selectorRellena.addEventListener('click', desplegarRellena);
@@ -197,7 +197,7 @@ function serverConector() {
 function initSkills() {
   serverConector();
 }
-itSkills();
+initSkills();
 function createPlusButton() {
   var plusButton = document.createElement('a');
   var divButton = document.createElement('div');
@@ -304,8 +304,9 @@ function showURL(result){
 var twitterShare = document.querySelector('.container__comparte--button-twitter');
 
 twitterShare.onclick = function(e) {
+  var linkTwitter = document.querySelector('.container--comparte-link  a').href;
   e.preventDefault();
-  var twitterWindow = window.open('https://twitter.com/share?url=' + document.URL, 'twitter-popup', 'height=350,width=600','590','253');
+  var twitterWindow = window.open('https://twitter.com/share?url=' + linkTwitter, 'twitter-popup', 'height=350,width=600','590','253');
   if(twitterWindow.focus) { twitterWindow.focus(); }
   return false;
 };
