@@ -36,6 +36,7 @@ var radios = document.querySelectorAll('.point');
 var radiosFont = document.querySelectorAll('.point1');
 //Habilidades
 var counterSkills = 0;
+var spanHab = document.querySelectorAll('.skill');
 //iconos
 var searchPhone = document.querySelector('.rellena__phone');
 var searchLinkedin = document.querySelector('.rellena__linkedin');
@@ -166,18 +167,33 @@ resetButton.addEventListener('click', visorAuto);
 
 //Habilidades
 function createSelect(entryskills) {
-  var input_select = document.createElement('select');
-  input_select.name = 'skills';
-  input_select.id = 'skills';
-  input_select.classList.add('select_skills');
+  var inputSelect = document.createElement('select');
+  inputSelect.name = 'skills';
+  inputSelect.id = 'skills' + counterSkills;
+  inputSelect.classList.add('select_skills');
   for (var i = 0; i < entryskills.length; i++) {
     var createOption = document.createElement('option');
     createOption.value = entryskills[i];
-    input_select.appendChild(createOption);
+    inputSelect.appendChild(createOption);
     createOption.innerHTML = entryskills[i];
   }
-  formRellenaSkills.appendChild(input_select);
+  inputSelect.addEventListener("change", skillAgregator);
+  formRellenaSkills.appendChild(inputSelect);
 }
+
+function skillAgregator(e){
+  var activeSelect = e.currentTarget; //esto define cual select fue cambiado
+  var activeSkills = document.querySelector('#selected' +  activeSelect.id); //componemos el id del elemento que se quiere cambiar concatenando la palabra selected con el id del select que he cambiado 
+  activeSkills.innerHTML= activeSelect.value;
+  console.log(activeSelect.value)
+  console.log(activeSelect.id)
+
+}
+
+
+
+
+
 function serverConector() {
   fetch(
     'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json'
@@ -213,10 +229,8 @@ function createPlusButton() {
   formRellenaSkills.appendChild(plusButton);
   plusButton.addEventListener('click', serverConector);
 }
-function minusButton(button) {
-  button.classList.toggle('fa-plus');
-  button.classList.toggle('fa-minus');
-}
+
+
 
 //diseña cambio color
 function init() {
