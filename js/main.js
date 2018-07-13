@@ -113,11 +113,6 @@ function writeData(event) {
   document.querySelector('#' + targetID).innerHTML = guiltyElement.value;
   userForm[formProperty] = guiltyElement.value;
   saveForm();
-  // if (targetID === 'userName') {
-  //   userForm.name = guiltyElement.value;
-  // } else if (targetID === 'job') {
-  //   userForm.job = guiltyElement.value;
-  // }
 }
 nameField.addEventListener('keyup', writeData);
 roleField.addEventListener('keyup', writeData);
@@ -187,22 +182,22 @@ function serverConector() {
   fetch(
     'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json'
   )
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(json) {
-    var skills = json.skills;
-    if (counterSkills < 3) {
-      createSelect(skills);
-      createPlusButton();
-      counterSkills = counterSkills + 1;
-    }
-  });
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      var skills = json.skills;
+      if (counterSkills < 3) {
+        createSelect(skills);
+        createPlusButton();
+        counterSkills = counterSkills + 1;
+      }
+    });
 }
 function initSkills() {
   serverConector();
 }
-initSkills();
+itSkills();
 function createPlusButton() {
   var plusButton = document.createElement('a');
   var divButton = document.createElement('div');
@@ -284,23 +279,20 @@ function linkSocials(event) {
   userForm[formProperty] = guiltyForm.value;
   saveForm();
 }
-
-// Crear enlace 
+// Crear enlace
 function sendRequest(userForm){
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
     method: 'POST',
     body: JSON.stringify(userForm),
     headers: {
       //no sabemos si funciona
-      'content-type': 'application/json' 
+      'content-type': 'application/json'
     },
   })
-  
-  .then(function(resp) { return resp.json(); })
-  .then(function(result) { showURL(result); })
-  .catch(function(error) { console.log(error); });
+    .then(function(resp) { return resp.json(); })
+    .then(function(result) { showURL(result); })
+    .catch(function(error) { console.log(error); });
 }
-
 function showURL(result){
   if(result.success){
     responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
@@ -308,21 +300,17 @@ function showURL(result){
     responseURL.innerHTML = 'ERROR:' + result.error;
   }
 }
-
-
 //BOTON TWITTER
-
 var twitterShare = document.querySelector('.container__comparte--button-twitter');
 
 twitterShare.onclick = function(e) {
   e.preventDefault();
   var twitterWindow = window.open('https://twitter.com/share?url=' + document.URL, 'twitter-popup', 'height=350,width=600','590','253');
   if(twitterWindow.focus) { twitterWindow.focus(); }
-    return false;
-  };
+  return false;
+};
 
 //localStorage
 function saveForm() {
   localStorage.setItem('userForm', JSON.stringify(userForm));
 }
-
