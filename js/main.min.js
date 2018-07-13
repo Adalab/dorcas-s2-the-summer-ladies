@@ -7,9 +7,7 @@ var formularioRellena = document.querySelector('.form__rellena');
 var selectorComparte = document.querySelector('.container__comparte--icon');
 var formularioComparte = document.querySelector('.form__comparte');
 var tarjetaCreada = document.querySelector('.container--comparte-created');
-var botonCrearTarjeta = document.querySelector(
-  '.container__comparte--buttonstyle'
-);
+var botonCrearTarjeta = document.querySelector('.container__comparte--buttonstyle');
 var botonrotado1 = document.querySelector('.move1');
 var botonrotado2 = document.querySelector('.move2');
 var botonrotado3 = document.querySelector('.move3');
@@ -44,6 +42,10 @@ var searchPhone = document.querySelector('.rellena__phone');
 var searchLinkedin = document.querySelector('.rellena__linkedin');
 var searchMail = document.querySelector('.rellena__email');
 var searchGithub = document.querySelector('.rellena__github');
+
+//link
+var responseURL = document.querySelector('.container--comparte-link');
+
 //localStorage
 var userForm = {
   'palette': 1,
@@ -97,6 +99,7 @@ function crearTarjeta() {
   } else {
     tarjetaCreada.classList.add('form__oculto');
   }
+  sendRequest(userForm);
 }
 selectorDisena.addEventListener('click', desplegarDisena);
 selectorRellena.addEventListener('click', desplegarRellena);
@@ -111,11 +114,6 @@ function writeData(event) {
   document.querySelector('#' + targetID).innerHTML = guiltyElement.value;
   userForm[formProperty] = guiltyElement.value;
   saveForm();
-  // if (targetID === 'userName') {
-  //   userForm.name = guiltyElement.value;
-  // } else if (targetID === 'job') {
-  //   userForm.job = guiltyElement.value;
-  // }
 }
 nameField.addEventListener('keyup', writeData);
 roleField.addEventListener('keyup', writeData);
@@ -203,9 +201,7 @@ function serverConector() {
       if (counterSkills < 3) {
         createSelect(skills);
         createPlusButton();
-
         counterSkills = counterSkills + 1;
-
       }
     });
 }
@@ -289,6 +285,38 @@ function linkSocials(event) {
   userForm[formProperty] = guiltyForm.value;
   saveForm();
 }
+// Crear enlace
+function sendRequest(userForm){
+  fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
+    method: 'POST',
+    body: JSON.stringify(userForm),
+    headers: {
+      //no sabemos si funciona
+      'content-type': 'application/json'
+    },
+  })
+    .then(function(resp) { return resp.json(); })
+    .then(function(result) { showURL(result); })
+    .catch(function(error) { console.log(error); });
+}
+function showURL(result){
+  if(result.success){
+    responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
+  }else{
+    responseURL.innerHTML = 'ERROR:' + result.error;
+  }
+}
+//BOTON TWITTER
+var twitterShare = document.querySelector('.container__comparte--button-twitter');
+
+twitterShare.onclick = function(e) {
+  var linkTwitter = document.querySelector('.container--comparte-link  a').href;
+  e.preventDefault();
+  var twitterWindow = window.open('https://twitter.com/share?url=' + linkTwitter, 'twitter-popup', 'height=350,width=600','590','253');
+  if(twitterWindow.focus) { twitterWindow.focus(); }
+  return false;
+};
+
 //localStorage
 function saveForm() {
   localStorage.setItem('userForm', JSON.stringify(userForm));
