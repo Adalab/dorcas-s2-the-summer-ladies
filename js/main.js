@@ -47,18 +47,20 @@ var searchGithub = document.querySelector('.rellena__github');
 var responseURL = document.querySelector('.container--comparte-link');
 
 //localStorage
-var userForm = {
-  'palette': 1,
-  'typography': 2,
-  'name' : 'María García',
-  'job': 'Front-end developer',
-  'phone': '+34 666666666',
-  'email': 'mariagar@example.com',
-  'linkedin': 'mariagar',
-  'github': 'mariagar',
-  'photo': 'data:image/png;base64,2342ba...',
-  'skills': ['HTML', 'Sass', 'JavaScript']
-};
+// var userForm = {
+//   'palette': 1,
+//   'typography': 2,
+//   'name' : 'María García',
+//   'job': 'Front-end developer',
+//   'phone': '+34 666666666',
+//   'email': 'mariagar@example.com',
+//   'linkedin': 'mariagar',
+//   'github': 'mariagar',
+//   'photo': 'data:image/png;base64,2342ba...',
+//   'skills': ['HTML', 'Sass', 'JavaScript']
+// };
+var userForm = {};
+includeLocalStorage();
 //desplegable
 function desplegarDisena() {
   if (formularioDisena.classList.contains('form__oculto')) {
@@ -112,8 +114,8 @@ function writeData(event) {
   var targetID = guiltyElement.getAttribute('data-donde');
   var formProperty = guiltyElement.getAttribute('data-property');
   document.querySelector('#' + targetID).innerHTML = guiltyElement.value;
-  userForm[formProperty] = guiltyElement.value;
-  saveForm();
+  //userForm[formProperty] = guiltyElement.value;
+  saveForm(formProperty,guiltyElement.value);
 }
 nameField.addEventListener('keyup', writeData);
 roleField.addEventListener('keyup', writeData);
@@ -128,8 +130,8 @@ function writeImage() {
   profileImage.src = fr.result;
   formImage.style.backgroundImage = 'url(' + fr.result + ')';
   //Guarda la imagen (todo el troncho data:image/JPG;base64,jkdsfhgdgd...) en nuestro objeto del formulario
-  userForm.photo = fr.result;
-  saveForm();
+  //userForm.photo = fr.result;
+  saveForm("photo", fr.result);
 }
 function fakeFileClick() {
   fileField.click();
@@ -238,8 +240,8 @@ function setStyles(event) {
   if (newColor !== '') {
     cardContainer.classList.add(newColor);
   }
-  userForm.palette = value;
-  saveForm();
+  //userForm.palette = value;
+  saveForm("palette", value);
 }
 function resetColor() {
   cardContainer.classList.remove('red', 'grey');
@@ -258,8 +260,8 @@ function setStylesFont(event) {
   if (newFont !== '') {
     cardContainer.classList.add(newFont);
   }
-  userForm.typography = value;
-  saveForm();
+  //userForm.typography = value;
+  saveForm("typography", value);
 }
 function resetFont() {
   cardContainer.classList.remove('comic', 'montserrat');
@@ -282,8 +284,8 @@ function linkSocials(event) {
     document.querySelector('#' + rrssId).href = 'https://' + guiltyForm.value;
   }
   var formProperty = guiltyForm.getAttribute('data-property');
-  userForm[formProperty] = guiltyForm.value;
-  saveForm();
+  //userForm[formProperty] = guiltyForm.value;
+  saveForm(formProperty,guiltyForm.value);
 }
 // Crear enlace
 function sendRequest(userForm){
@@ -291,7 +293,6 @@ function sendRequest(userForm){
     method: 'POST',
     body: JSON.stringify(userForm),
     headers: {
-      //no sabemos si funciona
       'content-type': 'application/json'
     },
   })
@@ -316,11 +317,31 @@ twitterShare.onclick = function(e) {
   if(twitterWindow.focus) { twitterWindow.focus(); }
   return false;
 };
-
 //localStorage
-function saveForm() {
+function saveForm(clave,valor) {
+  // Incluir la clave que acaba de rellenar el usuario
+  userForm[clave] = valor;
   localStorage.setItem('userForm', JSON.stringify(userForm));
 }
 function isAvailableForm() {
   return localStorage.getItem('userForm') !== null;
+}
+// Existe userForm en localStorage ?
+//  SI ->
+//      1. obtener userForm de localStorage y devolver el objeto
+//      2. por cada clave de userForm -> actualizar los valores en el DOM
+//  NO -> seteo userForm ={}
+function includeLocalStorage() {
+  var disponible = isAvailableForm();
+  if (disponible) {
+    var result = localStorage.getItem('userForm');
+    var resultJson = JSON.parse(result);
+    var resultArray = Object.keys(resultJson);
+    resultArray.map(function(clave) {
+      var elem = document.querySelector('.input__' + clave);
+      elem.value = resultJson[clave];
+    });
+  } else {
+    userForm = {};
+  }
 }
