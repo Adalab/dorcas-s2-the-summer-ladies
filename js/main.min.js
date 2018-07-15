@@ -168,6 +168,7 @@ function visorAuto() {
   visorImageAuto();
   visorDesignAuto();
   formAuto();
+  resetFont();
 
   // OCULTAR BOTON SKILLS
   visorSkills.classList.add('form__oculto');
@@ -196,14 +197,10 @@ function skillAgregator(e){
   var activeSkills = document.querySelector('#selected' +  activeSelect.id); //componemos el id del elemento que se quiere cambiar concatenando la palabra selected con el id del select que he cambiado
   activeSkills.innerHTML= activeSelect.value;
   visorSkills.classList.remove('form__oculto');
-  console.log(activeSelect.value)
-  console.log(activeSelect.id)
+  console.log(activeSelect.value);
+  console.log(activeSelect.id);
 
 }
-
-
-
-
 
 function serverConector() {
   fetch(
