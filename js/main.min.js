@@ -23,7 +23,7 @@ var fileField = document.querySelector('#imagen');
 var profileImage = document.querySelector('.visor__image-foto');
 var formImage = document.querySelector('.form__rellena--reload ');
 
-//boton reset
+//boton resetreset
 var resetButton = document.querySelector('.visor__button-reset');
 var visorContainer = document.querySelector('.visor__container1');
 var visorSkills = document.querySelector('.visor__skills');
@@ -151,6 +151,15 @@ function visorImageAuto() {
   profileImage.src = './images/flamingocardsok.jpg';
   formImage.style.backgroundImage = 'url("./images/flamingocardsok.jpg")';
 }
+function formAuto() {
+  nameField.value = '';
+  roleField.value = '';
+  searchPhone.value = '';
+  searchLinkedin.value = '';
+  searchMail.value = '';
+  searchGithub.value = '';
+
+}
 function visorAuto() {
   //CAMBIAR CAMPO NOMBRE Y APELLIDOS + EMPLEO EN VISOR
   visorName.innerHTML = 'Nombre y apellidos';
@@ -159,12 +168,12 @@ function visorAuto() {
   //CAMBIA A IMAGEN PREDEFINIDA Y DISEÑO PREDEFINIDO (BLUE)
   visorImageAuto();
   visorDesignAuto();
+  formAuto();
+  resetFont();
 
   // OCULTAR BOTON SKILLS
-  visorSkills.classList.add('form_hidden');
+  visorSkills.classList.add('form__oculto');
 }
-
-visorAuto();
 
 resetButton.addEventListener('click', visorAuto);
 
@@ -180,7 +189,7 @@ function createSelect(entryskills) {
     inputSelect.appendChild(createOption);
     createOption.innerHTML = entryskills[i];
   }
-  inputSelect.addEventListener("change", skillAgregator);
+  inputSelect.addEventListener('change', skillAgregator);
   formRellenaSkills.appendChild(inputSelect);
 }
 
@@ -188,8 +197,9 @@ function skillAgregator(e){
   var activeSelect = e.currentTarget; //esto define cual select fue cambiado
   var activeSkills = document.querySelector('#selected' +  activeSelect.id); //componemos el id del elemento que se quiere cambiar concatenando la palabra selected con el id del select que he cambiado
   activeSkills.innerHTML= activeSelect.value;
-  console.log(activeSelect.value)
-  console.log(activeSelect.id)
+  visorSkills.classList.remove('form__oculto');
+  console.log(activeSelect.value);
+  console.log(activeSelect.id);
 
 }
 
