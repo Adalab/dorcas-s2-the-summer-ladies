@@ -68,7 +68,7 @@ header {
   grid-row: 2;
 }
 
-footer {
+.container__footer {
   width: auto;
   border-top: solid 1px #d8d8d8;
   height: 111px;
@@ -88,6 +88,8 @@ footer {
   -ms-flex-align: center;
   align-items: center;
   color: #6b6b6b;
+  padding: 20px 60px 20px 60px;
+  height: 140px;
 }
 
 .footer__logo {
@@ -180,6 +182,7 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   padding-top: 10px;
+  border-bottom: solid 1px #d8d8d8;
 }
 
 .container__comparte--icon {
@@ -199,9 +202,8 @@ body {
   font-size: 18px;
 }
 
-.container--comparte-created {
-  margin-top: 20px;
-  margin-bottom: 30px;
+.container__comparte-created {
+  padding: 20px 0 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,12 +215,14 @@ body {
   -ms-flex-align: center;
   align-items: center;
   color: #54585a;
-  border-bottom: solid 1px #d8d8d8;
 }
 
-.container--comparte-link {
-  color: #e17334;
+.container__comparte-link {
   font-size: 12px;
+}
+
+.container__comparte-link a:link {
+  color: #e17334;
 }
 
 .fa-share-alt {
@@ -258,7 +262,6 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: solid 1px #d8d8d8;
 }
 
 .container__comparte--buttonstyle {
@@ -334,9 +337,12 @@ body {
   border-bottom: solid 1px #d8d8d8;
 }
 
+.container__form--rellena {
+  border-bottom: solid 1px #d8d8d8;
+}
+
 .form__rellena {
   padding-bottom: 21px;
-  border-bottom: solid 1px #d8d8d8;
 }
 
 .form__rellena fieldset {
@@ -358,6 +364,7 @@ body {
 }
 
 .titulo__rellena {
+  padding-top: 10px;
   text-transform: uppercase;
   font-weight: bold;
   color: #54585a;
@@ -367,7 +374,6 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 27px;
 }
 
 .form__rellena--plus {
@@ -854,7 +860,7 @@ body {
     grid-row: 1;
   }
 
-  footer {
+  .container__footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

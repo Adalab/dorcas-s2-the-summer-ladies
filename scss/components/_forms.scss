@@ -6,9 +6,12 @@ body {
   border-bottom: solid 1px $color-line-bottom;
 }
 
+.container__form--rellena {
+  border-bottom: solid 1px $color-line-bottom;
+}
+
 .form__rellena {
   padding-bottom: 21px;
-  border-bottom: solid 1px $color-line-bottom;
   fieldset {
     border: 0px;
     margin-top: 40px;
@@ -26,6 +29,7 @@ body {
 }
 
 .titulo__rellena {
+  padding-top: 10px;
   text-transform: uppercase;
   font-weight: bold;
   color: $color-titles;
@@ -33,7 +37,6 @@ body {
   grid-template-columns: 16px 1fr 50px;
   grid-template-rows: 1fr;
   align-items: center;
-  margin-top: 27px;
 }
 
 .form__rellena--plus {

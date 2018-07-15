@@ -6,7 +6,7 @@ var selectorRellena = document.querySelector('.titulo__rellena');
 var formularioRellena = document.querySelector('.form__rellena');
 var selectorComparte = document.querySelector('.container__comparte--icon');
 var formularioComparte = document.querySelector('.form__comparte');
-var tarjetaCreada = document.querySelector('.container--comparte-created');
+var tarjetaCreada = document.querySelector('.container__comparte-created');
 var botonCrearTarjeta = document.querySelector('.container__comparte--buttonstyle');
 var botonrotado1 = document.querySelector('.move1');
 var botonrotado2 = document.querySelector('.move2');
@@ -44,7 +44,7 @@ var searchMail = document.querySelector('.rellena__email');
 var searchGithub = document.querySelector('.rellena__github');
 
 //link
-var responseURL = document.querySelector('.container--comparte-link');
+var responseURL = document.querySelector('.container__comparte-link');
 
 //localStorage
 var userForm = {
@@ -59,6 +59,9 @@ var userForm = {
   'photo': 'data:image/png;base64,2342ba...',
   'skills': ['HTML', 'Sass', 'JavaScript']
 };
+/*var userForm = {};
+includeLocalStorage();*/
+
 //desplegable
 function desplegarDisena() {
   if (formularioDisena.classList.contains('form__oculto')) {
@@ -113,7 +116,7 @@ function writeData(event) {
   var formProperty = guiltyElement.getAttribute('data-property');
   document.querySelector('#' + targetID).innerHTML = guiltyElement.value;
   userForm[formProperty] = guiltyElement.value;
-  saveForm();
+  saveForm(formProperty,guiltyElement.value);
 }
 nameField.addEventListener('keyup', writeData);
 roleField.addEventListener('keyup', writeData);
@@ -129,7 +132,7 @@ function writeImage() {
   formImage.style.backgroundImage = 'url(' + fr.result + ')';
   //Guarda la imagen (todo el troncho data:image/JPG;base64,jkdsfhgdgd...) en nuestro objeto del formulario
   userForm.photo = fr.result;
-  saveForm();
+  saveForm("photo", fr.result);
 }
 function fakeFileClick() {
   fileField.click();
@@ -190,10 +193,6 @@ function skillAgregator(e){
 
 }
 
-
-
-
-
 function serverConector() {
   fetch(
     'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json'
@@ -247,7 +246,7 @@ function setStyles(event) {
     cardContainer.classList.add(newColor);
   }
   userForm.palette = value;
-  saveForm();
+  saveForm("palette", value);
 }
 function resetColor() {
   cardContainer.classList.remove('red', 'grey');
@@ -267,7 +266,7 @@ function setStylesFont(event) {
     cardContainer.classList.add(newFont);
   }
   userForm.typography = value;
-  saveForm();
+  saveForm("typography", value);
 }
 function resetFont() {
   cardContainer.classList.remove('comic', 'montserrat');
@@ -291,7 +290,7 @@ function linkSocials(event) {
   }
   var formProperty = guiltyForm.getAttribute('data-property');
   userForm[formProperty] = guiltyForm.value;
-  saveForm();
+  saveForm(formProperty,guiltyForm.value);
 }
 // Crear enlace
 function sendRequest(userForm){
