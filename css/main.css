@@ -757,7 +757,7 @@ body {
 }
 
 .blue .visor__view-list-txt {
-  border-top: #438792;
+  border-top: 2px solid #438792;
 }
 
 .blue .visor__list-text-icon {
@@ -778,7 +778,7 @@ body {
 }
 
 .red .visor__view-list-txt {
-  border-top: #bd1010;
+  border-top: 2px solid #bd1010;
 }
 
 .red .visor__list-text-icon {
@@ -799,7 +799,7 @@ body {
 }
 
 .grey .visor__view-list-txt {
-  border-top: #dfe5eb;
+  border-top: 2px solid #dfe5eb;
 }
 
 .grey .visor__list-text-icon {
