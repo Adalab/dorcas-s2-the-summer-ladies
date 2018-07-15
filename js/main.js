@@ -317,7 +317,7 @@ function showURL(result){
 var twitterShare = document.querySelector('.container__comparte--button-twitter');
 
 twitterShare.onclick = function(e) {
-  var linkTwitter = document.querySelector('.container--comparte-link  a').href;
+  var linkTwitter = document.querySelector('.container__comparte-link  a').href;
   e.preventDefault();
   var twitterWindow = window.open('https://twitter.com/share?url=' + linkTwitter, 'twitter-popup', 'height=350,width=600','590','253');
   if(twitterWindow.focus) { twitterWindow.focus(); }
