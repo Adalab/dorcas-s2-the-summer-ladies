@@ -131,7 +131,7 @@ function writeImage() {
   formImage.style.backgroundImage = 'url(' + fr.result + ')';
   //Guarda la imagen (todo el troncho data:image/JPG;base64,jkdsfhgdgd...) en nuestro objeto del formulario
   //userForm.photo = fr.result;
-  saveForm("photo", fr.result);
+  saveForm('photo', fr.result);
 }
 function fakeFileClick() {
   fileField.click();
@@ -179,7 +179,7 @@ function createSelect(entryskills) {
     inputSelect.appendChild(createOption);
     createOption.innerHTML = entryskills[i];
   }
-  inputSelect.addEventListener("change", skillAgregator);
+  inputSelect.addEventListener('change', skillAgregator);
   formRellenaSkills.appendChild(inputSelect);
 }
 
@@ -241,7 +241,7 @@ function setStyles(event) {
     cardContainer.classList.add(newColor);
   }
   //userForm.palette = value;
-  saveForm("palette", value);
+  saveForm('palette', value);
 }
 function resetColor() {
   cardContainer.classList.remove('red', 'grey');
@@ -261,7 +261,7 @@ function setStylesFont(event) {
     cardContainer.classList.add(newFont);
   }
   //userForm.typography = value;
-  saveForm("typography", value);
+  saveForm('typography', value);
 }
 function resetFont() {
   cardContainer.classList.remove('comic', 'montserrat');
