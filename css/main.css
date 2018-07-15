@@ -213,6 +213,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   color: #54585a;
+  border-bottom: solid 1px #d8d8d8;
 }
 
 .container--comparte-link {

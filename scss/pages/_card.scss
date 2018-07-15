@@ -38,6 +38,7 @@
   flex-direction: column;
   align-items: center;
   color: $color-titles;
+  border-bottom: solid 1px $color-line-bottom;
 }
 .container--comparte-link {
   color: $color-icon-title-button;
