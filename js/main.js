@@ -47,20 +47,8 @@ var searchGithub = document.querySelector('.rellena__github');
 var responseURL = document.querySelector('.container__comparte-link');
 
 //localStorage
-var userForm = {
-  'palette': 1,
-  'typography': 2,
-  'name' : 'María García',
-  'job': 'Front-end developer',
-  'phone': '+34 666666666',
-  'email': 'mariagar@example.com',
-  'linkedin': 'mariagar',
-  'github': 'mariagar',
-  'photo': 'data:image/png;base64,2342ba...',
-  'skills': ['HTML', 'Sass', 'JavaScript']
-};
-// var userForm = {};
-// includeLocalStorage();
+var userForm = {};
+includeLocalStorage();
 
 //desplegable
 function desplegarDisena() {
@@ -115,7 +103,6 @@ function writeData(event) {
   var targetID = guiltyElement.getAttribute('data-donde');
   var formProperty = guiltyElement.getAttribute('data-property');
   document.querySelector('#' + targetID).innerHTML = guiltyElement.value;
-  // userForm[formProperty] = guiltyElement.value;
   saveForm(formProperty,guiltyElement.value);
 }
 nameField.addEventListener('keyup', writeData);
@@ -124,15 +111,16 @@ roleField.addEventListener('keyup', writeData);
 //foto editor
 function getImage(e) {
   var myFile = e.currentTarget.files[0];
-  fr.addEventListener('load', writeImage);
+  fr.addEventListener('load', function(){
+    writeImage(fr.result);
+  });
   fr.readAsDataURL(myFile);
 }
-function writeImage() {
-  profileImage.src = fr.result;
-  formImage.style.backgroundImage = 'url(' + fr.result + ')';
+function writeImage(photo) {
+  profileImage.src = photo;
+  formImage.style.backgroundImage = 'url(' + photo + ')';
   //Guarda la imagen (todo el troncho data:image/JPG;base64,jkdsfhgdgd...) en nuestro objeto del formulario
-  //userForm.photo = fr.result;
-  saveForm('photo', fr.result);
+  saveForm('photo', photo);
 }
 function fakeFileClick() {
   fileField.click();
@@ -202,7 +190,6 @@ function skillAgregator(e){
   console.log(activeSelect.id);
 
 }
-
 function serverConector() {
   fetch(
     'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json'
@@ -238,9 +225,6 @@ function createPlusButton() {
   formRellenaSkills.appendChild(plusButton);
   plusButton.addEventListener('click', serverConector);
 }
-
-
-
 //diseña cambio color
 function init() {
   for (var i = 0; i < radios.length; i++) {
@@ -255,7 +239,6 @@ function setStyles(event) {
   if (newColor !== '') {
     cardContainer.classList.add(newColor);
   }
-  //userForm.palette = value;
   saveForm('palette', parseInt(value));
 }
 function resetColor() {
@@ -275,7 +258,6 @@ function setStylesFont(event) {
   if (newFont !== '') {
     cardContainer.classList.add(newFont);
   }
-  // userForm.typography = value;
   saveForm('typography', parseInt(value));
 }
 function resetFont() {
@@ -299,7 +281,6 @@ function linkSocials(event) {
     document.querySelector('#' + rrssId).href = 'https://' + guiltyForm.value;
   }
   var formProperty = guiltyForm.getAttribute('data-property');
-  // userForm[formProperty] = guiltyForm.value;
   saveForm(formProperty,guiltyForm.value);
 }
 // Crear enlace
@@ -334,32 +315,41 @@ twitterShare.onclick = function(e) {
 };
 
 //localStorage
+function includeLocalStorage() {
+  var disponible = isAvailableForm();
+  if (disponible) {
+    var result = localStorage.getItem('userForm');
+    var userForm = JSON.parse(result);
+    var resultArray = Object.keys(userForm);
+    resultArray.map(function(clave) {
+      if (clave === 'palette' || clave === 'typography') {
+        var elem = document.querySelector('.input__' + clave + '_' + userForm[clave]);
+      } else {
+        var elem = document.querySelector('.input__' + clave);
+      }
+      if (clave === 'photo') {
+        writeImage(userForm[clave]);
+      } else if (clave === 'palette' || clave === 'typography') {
+        elem.setAttribute('checked', 'checked');
+      } else {
+        elem.value = userForm[clave];
+      }
+    });
+  } else {
+    userForm = {};
+  }
+}
 function saveForm(clave,valor) {
   // Incluir la clave que acaba de rellenar el usuario
   userForm[clave] = valor;
   localStorage.setItem('userForm', JSON.stringify(userForm));
 }
-// function isAvailableForm() {
-//   return localStorage.getItem('userForm') !== null;
-// }
+function isAvailableForm() {
+  return localStorage.getItem('userForm') !== null;
+}
 
 // Existe userForm en localStorage ?
 //  SI ->
 //      1. obtener userForm de localStorage y devolver el objeto
 //      2. por cada clave de userForm -> actualizar los valores en el DOM
 //  NO -> seteo userForm ={}
-
-// function includeLocalStorage() {
-//   var disponible = isAvailableForm();
-//   if (disponible) {
-//     var result = localStorage.getItem('userForm');
-//     var resultJson = JSON.parse(result);
-//     var resultArray = Object.keys(resultJson);
-//     resultArray.map(function(clave) {
-//       var elem = document.querySelector('.input__' + clave);
-//       elem.value = resultJson[clave];
-//     });
-//   } else {
-//     userForm = {};
-//   }
-// }
