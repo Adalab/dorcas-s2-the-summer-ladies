@@ -37,6 +37,7 @@ var radiosFont = document.querySelectorAll('.point1');
 //Habilidades
 var counterSkills = 0;
 var skillsToSave =[];
+var skills = [];
 // var spanHab = document.querySelectorAll('.skill');
 //iconos
 var searchPhone = document.querySelector('.rellena__phone');
@@ -49,7 +50,6 @@ var responseURL = document.querySelector('.container__comparte-link');
 
 //localStorage
 var userForm = {};
-includeLocalStorage();
 
 //desplegable
 function desplegarDisena() {
@@ -199,18 +199,19 @@ function serverConector() {
       return response.json();
     })
     .then(function(json) {
-      var skills = json.skills;
-      if (counterSkills < 3) {
-        createSelect(skills);
-        createPlusButton();
-        counterSkills = counterSkills + 1;
-      }
+      skills = json.skills;
+      addSkills();
+      includeLocalStorage();
     });
 }
-function initSkills() {
-  serverConector();
+function addSkills() {
+  if (counterSkills < 3) {
+    createSelect(skills);
+    createPlusButton();
+    counterSkills = counterSkills + 1;
+  }
 }
-initSkills();
+serverConector();
 function createPlusButton() {
   var plusButton = document.createElement('a');
   var divButton = document.createElement('div');
@@ -344,7 +345,7 @@ function modifyElement(clave, elem) {
   } else if (clave === 'palette' || clave === 'typography') {
     elem.setAttribute('checked', 'checked');
   } else if (clave === 'skills') {
-    //printSkills();
+    printSkills();
   } else {
     elem.value = userForm[clave];
   }
@@ -353,10 +354,17 @@ function printSkills() {
   for (var i = 0; i < userForm.skills.length; i++) {
     var selectElement = document.querySelector('#skills' + i);
     if (selectElement === null) {
-      serverConector();
+      addSkills();
       selectElement = document.querySelector('#skills' + i);
     }
-    selectElement.value = userForm.skills[i];
+    checkSelectedOption(selectElement, i);
+  }
+}
+function checkSelectedOption(selectElement, i) {
+  for (var j = 0; j < selectElement.options.length; j++) {
+    if (selectElement.options[j].value === userForm.skills[i]) {
+      selectElement.options[j].setAttribute('selected', 'selected');
+    }
   }
 }
 function saveForm(clave,valor) {
