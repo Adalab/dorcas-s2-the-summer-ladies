@@ -22,14 +22,11 @@ var uploadBtn = document.querySelector('.form__rellena--button');
 var fileField = document.querySelector('#imagen');
 var profileImage = document.querySelector('.visor__image-foto');
 var formImage = document.querySelector('.form__rellena--reload ');
-
 //boton resetreset
 var resetButton = document.querySelector('.visor__button-reset');
 var visorContainer = document.querySelector('.visor__container1');
 var visorSkills = document.querySelector('.visor__skills');
-
 var formRellenaSkills = document.querySelector('.form__rellena--skills');
-
 //diseña cambio color
 var cardContainer = document.querySelector('.visor__container1');
 var radios = document.querySelectorAll('.point');
@@ -38,19 +35,15 @@ var radiosFont = document.querySelectorAll('.point1');
 var counterSkills = 0;
 var skillsToSave =[];
 var skills = [];
-// var spanHab = document.querySelectorAll('.skill');
 //iconos
 var searchPhone = document.querySelector('.rellena__phone');
 var searchLinkedin = document.querySelector('.rellena__linkedin');
 var searchMail = document.querySelector('.rellena__email');
 var searchGithub = document.querySelector('.rellena__github');
-
 //link
 var responseURL = document.querySelector('.container__comparte-link');
-
 //localStorage
 var userForm = {};
-
 //desplegable
 function desplegarDisena() {
   if (formularioDisena.classList.contains('form__oculto')) {
@@ -97,7 +90,6 @@ selectorDisena.addEventListener('click', desplegarDisena);
 selectorRellena.addEventListener('click', desplegarRellena);
 selectorComparte.addEventListener('click', desplegarComparte);
 botonCrearTarjeta.addEventListener('click', crearTarjeta);
-
 //escritura automática visor
 function writeData(event) {
   var guiltyElement = event.currentTarget;
@@ -108,7 +100,6 @@ function writeData(event) {
 }
 nameField.addEventListener('keyup', writeData);
 roleField.addEventListener('keyup', writeData);
-
 //foto editor
 function getImage(e) {
   var myFile = e.currentTarget.files[0];
@@ -120,7 +111,6 @@ function getImage(e) {
 function writeImage(photo) {
   profileImage.src = photo;
   formImage.style.backgroundImage = 'url(' + photo + ')';
-  //Guarda la imagen (todo el troncho data:image/JPG;base64,jkdsfhgdgd...) en nuestro objeto del formulario
   saveForm('photo', photo);
 }
 function fakeFileClick() {
@@ -129,9 +119,6 @@ function fakeFileClick() {
 fileField.addEventListener('change', getImage);
 uploadBtn.addEventListener('click', fakeFileClick);
 // BOTON RESET
-
-// cuando carga la pagina aparece el visor con datos predefinidos
-// si se hace click en reset esos campos vuelven a estar predefinido
 function visorDesignAuto() {
   visorContainer.classList.remove('red');
   visorContainer.classList.remove('grey');
@@ -150,22 +137,17 @@ function formAuto() {
 
 }
 function visorAuto() {
-  //CAMBIAR CAMPO NOMBRE Y APELLIDOS + EMPLEO EN VISOR
   visorName.innerHTML = 'Nombre y apellidos';
   visorJob.innerHTML = 'Empleo';
 
-  //CAMBIA A IMAGEN PREDEFINIDA Y DISEÑO PREDEFINIDO (BLUE)
   visorImageAuto();
   visorDesignAuto();
   formAuto();
   resetFont();
 
-  // OCULTAR BOTON SKILLS
   visorSkills.classList.add('form__oculto');
 }
-
 resetButton.addEventListener('click', visorAuto);
-
 //Habilidades
 function createSelect(entryskills) {
   var inputSelect = document.createElement('select');
@@ -183,14 +165,13 @@ function createSelect(entryskills) {
   formRellenaSkills.appendChild(inputSelect);
 }
 function skillAgregator(e){
-  var activeSelect = e.currentTarget; //esto define cual select fue cambiado
-  var activeSkills = document.querySelector('#selected' +  activeSelect.id); //componemos el id del elemento que se quiere cambiar concatenando la palabra selected con el id del select que he cambiado
+  var activeSelect = e.currentTarget;
+  var activeSkills = document.querySelector('#selected' +  activeSelect.id);
   activeSkills.innerHTML= activeSelect.value;
   visorSkills.classList.remove('form__oculto');
   skillsToSave[activeSelect.getAttribute('data-index')] = activeSelect.value;
   saveForm('skills', skillsToSave);
 }
-
 function serverConector() {
   fetch(
     'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json'
@@ -227,7 +208,6 @@ function createPlusButton() {
   formRellenaSkills.appendChild(plusButton);
   plusButton.addEventListener('click', serverConector);
 }
-
 //diseña cambio color
 function init() {
   for (var i = 0; i < radios.length; i++) {
@@ -235,7 +215,6 @@ function init() {
   }
 }
 function setStyles(event) {
-  //del elemento donde he hecho el click que me de su atributo data-color
   var newColor = event.currentTarget.getAttribute('data-color');
   var value = event.currentTarget.value;
   resetColor();
@@ -316,7 +295,6 @@ twitterShare.onclick = function(e) {
   if(twitterWindow.focus) { twitterWindow.focus(); }
   return false;
 };
-
 //localStorage
 function includeLocalStorage() {
   var disponible = isAvailableForm();
