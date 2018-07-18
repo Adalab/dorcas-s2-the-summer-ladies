@@ -5,7 +5,17 @@
 	},
 	"js": {
 		"src": [
-			"js/main.js"
+      "js/main.js",
+      "js/collapsable.js",
+      "js/createcard.js",
+      "js/design.js",
+      "js/icons.js",
+      "js/localstorage",
+      "js/photoeditor.js",
+      "js/reset.js",
+      "js/share.js",
+      "js/skills.js",
+      "js/textvisor.js"
 		],
 		"dest": "js/"
 	},
