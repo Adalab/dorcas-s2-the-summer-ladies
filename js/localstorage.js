@@ -1,27 +1,29 @@
+'use strict';
 
 //localStorage
-function includeLocalStorage() {
-  var disponible = isAvailableForm();
+const includeLocalStorage = () => {
+  const disponible = isAvailableForm();
   if (disponible) {
-    var result = localStorage.getItem('userForm');
+    const result = localStorage.getItem('userForm');
     userForm = JSON.parse(result);
-    var resultArray = Object.keys(userForm);
-    resultArray.map(function(clave) {
-      var elem = findElementToModify(clave);
+    const resultArray = Object.keys(userForm);
+    resultArray.map(clave => {
+      const elem = findElementToModify(clave);
       modifyElement(clave, elem);
     });
   } else {
     userForm = {};
   }
 }
-function findElementToModify(clave) {
-  var elem = document.querySelector('.input__' + clave);
+
+const findElementToModify = clave => {
+  const elem = document.querySelector('.input__' + clave);
   if (clave === 'palette' || clave === 'typography') {
     elem = document.querySelector('.input__' + clave + '_' + userForm[clave]);
   }
   return elem;
 }
-function modifyElement(clave, elem) {
+const modifyElement = (clave, elem) => {
   if (clave === 'photo') {
     writeImage(userForm[clave]);
   } else if (clave === 'palette' || clave === 'typography') {
@@ -33,9 +35,9 @@ function modifyElement(clave, elem) {
   }
 }
 
-function printSkills() {
+const printSkills = () => {
   for (var i = 0; i < userForm.skills.length; i++) {
-    var selectElement = document.querySelector('#skills' + i);
+    const selectElement = document.querySelector('#skills' + i);
     if (selectElement === null) {
       addSkills();
       selectElement = document.querySelector('#skills' + i);
@@ -43,17 +45,17 @@ function printSkills() {
     checkSelectedOption(selectElement, i);
   }
 }
-function checkSelectedOption(selectElement, i) {
-  for (var j = 0; j < selectElement.options.length; j++) {
-    if (selectElement.options[j].value === userForm.skills[i]) {
-      selectElement.options[j].setAttribute('selected', 'selected');
+const checkSelectedOption = (selectElement, i) => {
+  for(const option of selectElement.options) {
+    if (option.value === userForm.skills[i]) {
+      option.setAttribute('selected', 'selected');
     }
   }
 }
-function saveForm(clave,valor) {
+const saveForm = (clave,valor) => {
   userForm[clave] = valor;
   localStorage.setItem('userForm', JSON.stringify(userForm));
 }
-function isAvailableForm() {
+const isAvailableForm = () => {
   return localStorage.getItem('userForm') !== null;
 }
