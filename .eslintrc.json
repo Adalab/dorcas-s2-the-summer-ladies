@@ -10,9 +10,10 @@
         "quotes": [2, "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
         "semi": [2, "always"],
         "eqeqeq": 2,
-        "strict": [2, "global"],
+        // "strict": [2, "global"],
 
         "no-console": 1,
+        "no-undef":"warn",
         "array-callback-return": 1,
         "block-scoped-var": 1,
         "consistent-return": 1,

@@ -1,6 +1,6 @@
 
 //desplegables
-function desplegarDisena() {
+const desplegarDisena = () => {
   if (formularioDisena.classList.contains('form__oculto')) {
     formularioDisena.classList.remove('form__oculto');
     formularioRellena.classList.add('form__oculto');
@@ -10,7 +10,8 @@ function desplegarDisena() {
     formularioDisena.classList.add('form__oculto');
     botonrotado1.classList.remove('rotate');
   }
-}
+};
+
 function desplegarRellena() {
   if (formularioRellena.classList.contains('form__oculto')) {
     formularioRellena.classList.remove('form__oculto');
