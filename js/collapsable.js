@@ -12,7 +12,7 @@ const desplegarDisena = () => {
   }
 };
 
-function desplegarRellena() {
+const desplegarRellena = () => {
   if (formularioRellena.classList.contains('form__oculto')) {
     formularioRellena.classList.remove('form__oculto');
     formularioDisena.classList.add('form__oculto');
@@ -23,7 +23,7 @@ function desplegarRellena() {
     botonrotado2.classList.remove('rotate');
   }
 }
-function desplegarComparte() {
+const desplegarComparte = () => {
   if (formularioComparte.classList.contains('form__oculto')) {
     formularioComparte.classList.remove('form__oculto');
     formularioDisena.classList.add('form__oculto');
@@ -34,7 +34,7 @@ function desplegarComparte() {
     botonrotado3.classList.remove('rotate');
   }
 }
-function crearTarjeta() {
+const crearTarjeta = () => {
   if (tarjetaCreada.classList.contains('form__oculto')) {
     tarjetaCreada.classList.remove('form__oculto');
   } else {
