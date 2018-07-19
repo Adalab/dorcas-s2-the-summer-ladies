@@ -1,5 +1,4 @@
 
-
 //desplegables
 function desplegarDisena() {
   if (formularioDisena.classList.contains('form__oculto')) {
