@@ -1,39 +1,39 @@
 
 //diseña cambio color
-function init() {
+const init = () => {
   for (var i = 0; i < radios.length; i++) {
     radios[i].addEventListener('click', setStyles);
   }
-}
-function setStyles(event) {
-  var newColor = event.currentTarget.getAttribute('data-color');
-  var value = event.currentTarget.value;
+};
+const setStyles = (event) => {
+  const newColor = event.currentTarget.getAttribute('data-color');
+  const value = event.currentTarget.value;
   resetColor();
   if (newColor !== '') {
     cardContainer.classList.add(newColor);
   }
   saveForm('palette', parseInt(value));
-}
-function resetColor() {
+};
+const resetColor = () => {
   cardContainer.classList.remove('red', 'grey');
-}
+};
 init();
 //diseña cambio de fuentes
-function initFont() {
+const initFont = () => {
   for (var i = 0; i < radiosFont.length; i++) {
     radiosFont[i].addEventListener('click', setStylesFont);
   }
-}
-function setStylesFont(event) {
-  var newFont = event.currentTarget.getAttribute('data-font');
-  var value = event.currentTarget.value;
+};
+const  setStylesFont = (event) => {
+  const newFont = event.currentTarget.getAttribute('data-font');
+  const value = event.currentTarget.value;
   resetFont();
   if (newFont !== '') {
     cardContainer.classList.add(newFont);
   }
   saveForm('typography', parseInt(value));
-}
-function resetFont() {
+};
+const resetFont = () => {
   cardContainer.classList.remove('comic', 'montserrat');
-}
+};
 initFont();
