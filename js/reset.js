@@ -1,13 +1,13 @@
 // BOTON RESET
-function visorDesignAuto() {
+const visorDesignAuto = () => {
   visorContainer.classList.remove('red');
   visorContainer.classList.remove('grey');
-}
-function visorImageAuto() {
+};
+const visorImageAuto = () => {
   profileImage.src = './images/flamingocardsok.jpg';
   formImage.style.backgroundImage = 'url("./images/flamingocardsok.jpg")';
-}
-function formAuto() {
+};
+const formAuto = () => {
   nameField.value = '';
   roleField.value = '';
   searchPhone.value = '';
@@ -15,8 +15,8 @@ function formAuto() {
   searchMail.value = '';
   searchGithub.value = '';
 
-}
-function visorAuto() {
+};
+const visorAuto = () => {
   visorName.innerHTML = 'Nombre y apellidos';
   visorJob.innerHTML = 'Empleo';
 
@@ -26,5 +26,5 @@ function visorAuto() {
   resetFont();
 
   visorSkills.classList.add('form__oculto');
-}
+};
 resetButton.addEventListener('click', visorAuto);
