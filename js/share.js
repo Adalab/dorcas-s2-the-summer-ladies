@@ -1,3 +1,4 @@
+'use strict';
 
 // Crear enlace
 function sendRequest(userForm){
