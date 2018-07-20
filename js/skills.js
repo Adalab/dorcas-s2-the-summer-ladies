@@ -1,53 +1,53 @@
 
 //Habilidades
-function createSelect(entryskills) {
-  var inputSelect = document.createElement('select');
+const createSelect = (entryskills) => {
+  const inputSelect = document.createElement('select');
   inputSelect.name = 'skills';
   inputSelect.id = 'skills' + counterSkills;
   inputSelect.classList.add('select_skills');
   inputSelect.setAttribute('data-index', counterSkills);
-  for (var i = 0; i < entryskills.length; i++) {
-    var createOption = document.createElement('option');
-    createOption.value = entryskills[i];
+  for (const skill of entryskills) {
+    const createOption = document.createElement('option');
+    createOption.value = skill;
     inputSelect.appendChild(createOption);
-    createOption.innerHTML = entryskills[i];
+    createOption.innerHTML = skill;
   }
   inputSelect.addEventListener('change', skillAgregator);
   formRellenaSkills.appendChild(inputSelect);
-}
-function skillAgregator(e){
-  var activeSelect = e.currentTarget;
-  var activeSkills = document.querySelector('#selected' +  activeSelect.id);
+};
+const skillAgregator = (e) => {
+  const activeSelect = e.currentTarget;
+  const activeSkills = document.querySelector('#selected' +  activeSelect.id);
   activeSkills.innerHTML= activeSelect.value;
   visorSkills.classList.remove('form__oculto');
   skillsToSave[activeSelect.getAttribute('data-index')] = activeSelect.value;
   saveForm('skills', skillsToSave);
-}
-function serverConector() {
+};
+const serverConector = () => {
   fetch(
     'https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json'
   )
-    .then(function(response) {
+    .then((response) => {
       return response.json();
     })
-    .then(function(json) {
+    .then((json) => {
       skills = json.skills;
       addSkills();
       includeLocalStorage();
     });
-}
-function addSkills() {
+};
+const addSkills = () => {
   if (counterSkills < 3) {
     createSelect(skills);
     createPlusButton();
     counterSkills = counterSkills + 1;
   }
-}
+};
 serverConector();
-function createPlusButton() {
-  var plusButton = document.createElement('a');
-  var divButton = document.createElement('div');
-  var iButton = document.createElement('i');
+const createPlusButton = () => {
+  const plusButton = document.createElement('a');
+  const divButton = document.createElement('div');
+  const iButton = document.createElement('i');
   divButton.classList.add('form__rellena--plus');
   divButton.classList.add('color--orange');
   divButton.classList.add('addSkill');
@@ -58,4 +58,4 @@ function createPlusButton() {
   plusButton.appendChild(divButton);
   formRellenaSkills.appendChild(plusButton);
   plusButton.addEventListener('click', serverConector);
-}
+};
