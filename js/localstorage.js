@@ -17,7 +17,7 @@ const includeLocalStorage = () => {
 }
 
 const findElementToModify = clave => {
-  const elem = document.querySelector('.input__' + clave);
+  let elem = document.querySelector('.input__' + clave);
   if (clave === 'palette' || clave === 'typography') {
     elem = document.querySelector('.input__' + clave + '_' + userForm[clave]);
   }
