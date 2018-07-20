@@ -45,6 +45,3 @@ const searchGithub = document.querySelector('.rellena__github');
 const responseURL = document.querySelector('.container__comparte-link');
 //localStorage
 let userForm = {};
-
-
-
