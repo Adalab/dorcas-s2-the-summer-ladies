@@ -18,7 +18,7 @@ const roleField = document.querySelector('.input__job');
 const visorName = document.querySelector('.visor__view-name');
 const visorJob = document.querySelector('.visor__view-profession');
 //foto editor
-const fr = new FileReader();
+let fr = new FileReader();
 const uploadBtn = document.querySelector('.form__rellena--button');
 const fileField = document.querySelector('#imagen');
 const profileImage = document.querySelector('.visor__image-foto');
@@ -33,9 +33,9 @@ const cardContainer = document.querySelector('.visor__container1');
 const radios = document.querySelectorAll('.point');
 const radiosFont = document.querySelectorAll('.point1');
 //Habilidades
-const counterSkills = 0;
-const skillsToSave =[];
-const skills = [];
+let counterSkills = 0;
+let skillsToSave =[];
+let skills = [];
 //iconos
 const searchPhone = document.querySelector('.rellena__phone');
 const searchLinkedin = document.querySelector('.rellena__linkedin');
@@ -44,7 +44,7 @@ const searchGithub = document.querySelector('.rellena__github');
 //link
 const responseURL = document.querySelector('.container__comparte-link');
 //localStorage
-const userForm = {};
+let userForm = {};
 
 
 
