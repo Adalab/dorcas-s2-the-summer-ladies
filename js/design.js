@@ -1,8 +1,8 @@
 
 //diseña cambio color
 const init = () => {
-  for (var i = 0; i < radios.length; i++) {
-    radios[i].addEventListener('click', setStyles);
+  for (const radioscol of radios) {
+    radioscol.addEventListener('click', setStyles);
   }
 };
 const setStyles = (event) => {
@@ -20,8 +20,8 @@ const resetColor = () => {
 init();
 //diseña cambio de fuentes
 const initFont = () => {
-  for (var i = 0; i < radiosFont.length; i++) {
-    radiosFont[i].addEventListener('click', setStylesFont);
+  for (const radios of radiosFont) {
+    radios.addEventListener('click', setStylesFont);
   }
 };
 const  setStylesFont = (event) => {

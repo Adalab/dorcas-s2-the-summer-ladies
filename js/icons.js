@@ -1,12 +1,7 @@
 
 //iconos
-searchPhone.addEventListener('keyup', linkSocials);
-searchLinkedin.addEventListener('keyup', linkSocials);
-searchMail.addEventListener('keyup', linkSocials);
-searchGithub.addEventListener('keyup', linkSocials);
-
 const linkSocials = (event) => {
-  const guiltyForm = event.currentTarget;
+  let guiltyForm = event.currentTarget;
   const rrssId = guiltyForm.getAttribute('data-rrss');
   if (guiltyForm.classList.contains('rellena__phone')) {
     document.querySelector('#' + rrssId).href = 'tel:' + guiltyForm.value;
@@ -18,3 +13,8 @@ const linkSocials = (event) => {
   const formProperty = guiltyForm.getAttribute('data-property');
   saveForm(formProperty,guiltyForm.value);
 };
+
+searchPhone.addEventListener('keyup', linkSocials);
+searchLinkedin.addEventListener('keyup', linkSocials);
+searchMail.addEventListener('keyup', linkSocials);
+searchGithub.addEventListener('keyup', linkSocials);
