@@ -1,3 +1,4 @@
+'use strict';
 
 //foto editor
 function getImage(e) {
