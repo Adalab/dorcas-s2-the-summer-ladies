@@ -1,4 +1,4 @@
-
+/* global nameField roleField */
 //escritura automática visor
 const writeData = (event) => {
   var guiltyElement = event.currentTarget;
