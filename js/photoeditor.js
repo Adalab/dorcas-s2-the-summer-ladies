@@ -7,16 +7,15 @@ const getImage = e => {
     writeImage(fr.result);
   });
   fr.readAsDataURL(myFile);
-}
+};
 const writeImage = photo => {
   profileImage.src = photo;
   formImage.style.backgroundImage = 'url(' + photo + ')';
   saveForm('photo', photo);
-}
+};
 const fakeFileClick = () => {
   fileField.click();
 
-}
+};
 fileField.addEventListener('change', getImage);
 uploadBtn.addEventListener('click', fakeFileClick);
-console.log('soy photoeditor');

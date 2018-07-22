@@ -42,7 +42,6 @@ const crearTarjeta = () => {
   }
   sendRequest(userForm);
 };
-console.log ('hola');
 
 selectorDisena.addEventListener('click', desplegarDisena);
 selectorRellena.addEventListener('click', desplegarRellena);
