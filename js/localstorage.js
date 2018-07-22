@@ -14,7 +14,7 @@ const includeLocalStorage = () => {
   } else {
     userForm = {};
   }
-}
+};
 
 const findElementToModify = clave => {
   let elem = document.querySelector('.input__' + clave);
@@ -22,7 +22,7 @@ const findElementToModify = clave => {
     elem = document.querySelector('.input__' + clave + '_' + userForm[clave]);
   }
   return elem;
-}
+};
 const modifyElement = (clave, elem) => {
   if (clave === 'photo') {
     writeImage(userForm[clave]);
@@ -33,29 +33,29 @@ const modifyElement = (clave, elem) => {
   } else {
     elem.value = userForm[clave];
   }
-}
+};
 
 const printSkills = () => {
   for (var i = 0; i < userForm.skills.length; i++) {
-    const selectElement = document.querySelector('#skills' + i);
+    let selectElement = document.querySelector('#skills' + i);
     if (selectElement === null) {
       addSkills();
       selectElement = document.querySelector('#skills' + i);
     }
     checkSelectedOption(selectElement, i);
   }
-}
+};
 const checkSelectedOption = (selectElement, i) => {
   for(const option of selectElement.options) {
     if (option.value === userForm.skills[i]) {
       option.setAttribute('selected', 'selected');
     }
   }
-}
+};
 const saveForm = (clave,valor) => {
   userForm[clave] = valor;
   localStorage.setItem('userForm', JSON.stringify(userForm));
-}
+};
 const isAvailableForm = () => {
   return localStorage.getItem('userForm') !== null;
-}
+};
